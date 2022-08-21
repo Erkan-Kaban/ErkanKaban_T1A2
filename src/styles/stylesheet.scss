@@ -1,0 +1,63 @@
+$main-background-color-1: #191b1c;
+$non-highlighted-logo-filter-value: invert(45%) sepia(69%) saturate(0%) hue-rotate(232deg) brightness(98%) contrast(86%);
+$highlighted-logo-filter-value: invert(43%) sepia(93%) saturate(738%) hue-rotate(121deg) brightness(92%) contrast(101%);
+
+@mixin logo-size-mobile {
+    height: 2.3rem;
+    width: 2.3rem;
+}
+
+@mixin display-flex-settings {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.highlighted-logo {
+    filter: $highlighted-logo-filter-value;
+    @include logo-size-mobile();
+}
+
+header {
+    @include display-flex-settings();
+    padding-top: 1rem;
+    width: 50px;
+    height: 100%;
+    background: $main-background-color-1;
+    align-items: center;
+    min-height: 34rem;
+}
+
+nav {
+    @include display-flex-settings();
+    justify-content: center;
+    padding-bottom: 1rem;
+    //height: 100%;
+}
+
+#portfolio-logo {
+    @include logo-size-mobile();
+    border-radius: 50%;
+}
+
+.nav-logo {
+    @include logo-size-mobile();
+    filter: $non-highlighted-logo-filter-value;
+}
+
+nav a {
+    
+    height: 15%;
+}
+
+nav a:hover {
+    filter: $highlighted-logo-filter-value;
+}
+
