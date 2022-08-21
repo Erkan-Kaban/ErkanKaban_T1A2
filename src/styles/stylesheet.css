@@ -2,44 +2,71 @@
   margin: 0;
   padding: 0;
   border: 0;
-  box-sizing: border-box;
-  height: 100%; }
+  box-sizing: border-box; }
 
 .highlighted-logo {
-  filter: invert(43%) sepia(93%) saturate(738%) hue-rotate(121deg) brightness(92%) contrast(101%);
-  height: 2.3rem;
-  width: 2.3rem; }
+  filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
+  height: 2.5rem;
+  width: 2.5rem;
+  pointer-events: none; }
 
 header {
+  position: fixed;
+  border-right: solid #494a4b 1px;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  width: 50px;
+  width: 75px;
   height: 100%;
   background: #191b1c;
   align-items: center;
-  min-height: 34rem; }
+  min-height: 32rem;
+  top: 0; }
 
 nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 1rem; }
+  padding-bottom: 1rem;
+  height: 100%; }
 
-#portfolio-logo {
-  height: 2.3rem;
-  width: 2.3rem;
-  border-radius: 50%; }
+.portfolio-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: #00c483;
+  width: 100%;
+  padding: .2rem;
+  height: 75px;
+  font-size: xx-large; }
 
 .nav-logo {
-  height: 2.3rem;
-  width: 2.3rem;
-  filter: invert(45%) sepia(69%) saturate(0%) hue-rotate(232deg) brightness(98%) contrast(86%); }
+  height: 2.5rem;
+  width: 2.5rem;
+  filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%); }
+
+.nav-logo:hover {
+  filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%); }
 
 nav a {
-  height: 15%; }
+  height: 9%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center; }
 
-nav a:hover {
-  filter: invert(43%) sepia(93%) saturate(738%) hue-rotate(121deg) brightness(92%) contrast(101%); }
+main {
+  display: flex;
+  position: absolute;
+  background-color: #191b1c;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  width: 96.1%;
+  height: 100%;
+  min-height: 32rem;
+  left: 75px; }
+
+body {
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=stylesheet.css.map */
