@@ -59,10 +59,8 @@ nav a {
 main {
   display: flex;
   position: absolute;
-  background-color: #191b1c;
   top: 0px;
   left: 0px;
-  z-index: -1;
   width: 96.1%;
   min-height: 100%;
   height: 32rem;
@@ -103,7 +101,8 @@ p {
 
 article {
   background-color: #191b1c;
-  padding: 3rem 3rem; }
+  padding: 3rem 3rem 2rem 0.5rem;
+  border-bottom: solid #494a4b .5px; }
 
 h3 {
   font-family: 'Roboto', sans-serif;
@@ -112,9 +111,6 @@ h3 {
   margin: 1rem 1rem;
   font-size: 1.5rem;
   padding-bottom: 2rem; }
-
-hr {
-  border: solid #494a4b 1px; }
 
 body::-webkit-scrollbar {
   width: 12px; }
@@ -130,12 +126,16 @@ body::-webkit-scrollbar-thumb {
 .social-links {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 64px;
-  width: 64px; }
+  width: 64px;
+  margin-right: 2rem;
+  padding-right: 1rem; }
 
 #social-class {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  width: 96.1%;
+  padding: 0; }
 
 #social-class p {
   color: white;
@@ -143,20 +143,28 @@ body::-webkit-scrollbar-thumb {
   width: 100%; }
 
 .contact-me-social {
-  font-size: 1.5rem;
+  width: 96.1%;
+  font-size: 1.3rem;
   font-family: 'Roboto', sans-serif;
   text-align: center;
   color: white;
-  padding: 0;
   width: 100%;
   background-color: #191b1c;
   padding-top: 2rem;
-  margin: auto; }
+  margin: auto;
+  padding-right: 3rem;
+  border: none; }
 
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
-  * {
-    background-color: red; } }
+  .portfolio-section {
+    display: none; }
+
+  #social-class {
+    width: 100vw; } }
 @media screen and (min-width: 834px) {
+  article {
+    padding: 3rem 3rem; }
+
   html {
     background-color: black; }
 
@@ -168,6 +176,37 @@ body::-webkit-scrollbar-thumb {
     margin-left: 3rem; }
 
   main {
-    width: 50%; } }
+    width: 50%; }
+
+  #social-class {
+    width: 60vw; }
+
+  p {
+    width: 100%; }
+
+  article {
+    padding: 2rem;
+    width: 60vw;
+    margin-left: 50%; }
+
+  .contact-me-social {
+    width: 60vw;
+    margin-left: 50%;
+    padding-left: 8rem; }
+
+  .portfolio-section {
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    background-image: url(../images/ErkanK-2021-6719.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+
+  .social-links {
+    margin-left: 1.5rem; }
+
+  .contact-me-social {
+    padding-right: 7rem; } }
 
 /*# sourceMappingURL=stylesheet.css.map */
