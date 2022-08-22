@@ -146,9 +146,6 @@ hr {
 }
 
 body::-webkit-scrollbar {
-    // overflow: hidden;
-    // height: 100%;
-    // width: 100%;
     width: 12px;
 }
 
@@ -195,4 +192,26 @@ body::-webkit-scrollbar-thumb {
     background-color: #191b1c;
     padding-top: 2rem;
     margin: auto;
+}
+
+@media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    * {
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 834px) {
+    html {
+        background-color: black;
+    }
+    header {
+        top: 10%;
+        height: 80%;
+    }
+    body, main {
+        margin-left: 3rem;
+    }
+    main {
+        width: 50%;
+    }
 }
