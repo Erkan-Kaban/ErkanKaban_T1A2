@@ -7,6 +7,7 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
     width: 2.5rem;
 }
 
+
 @mixin display-flex-settings {
     display: flex;
     flex-direction: column;
@@ -56,6 +57,10 @@ nav {
     height: 75px;
     font-size:xx-large;
     font-family: 'Roboto', sans-serif;
+}
+
+.portfolio-logo img {
+    width: 50px;
 }
 
 .nav-logo {
@@ -136,7 +141,7 @@ h3 {
         text-align: center;
         margin: 1rem 1rem;
         font-size: 1.5rem;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
 }
 
 
@@ -157,14 +162,16 @@ body::-webkit-scrollbar-thumb {
 
 
 .social-links {
-    filter: $highlighted-logo-filter-value;
+    filter: $non-highlighted-logo-filter-value;
     height: 64px;
     width: 64px;
     margin-right: 2rem;
     padding-right: 1rem;
 }
 
-
+.social-links:hover {
+    filter: $highlighted-logo-filter-value;
+}
 #social-class {
     display: flex;
     flex-direction: row;
@@ -192,8 +199,13 @@ body::-webkit-scrollbar-thumb {
     padding-top: 2rem;
     margin: auto;
     padding-right: 3rem;
-    border: none;
+}
 
+.article-icon {
+    filter: invert(100%) sepia(0%) saturate(7437%) hue-rotate(34deg) brightness(103%) contrast(103%);
+    margin-bottom: 1rem;
+    height: 64px;
+    width: 64px;
 }
 
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
@@ -201,14 +213,28 @@ body::-webkit-scrollbar-thumb {
         display: none;
    }
    #social-class {
-    width: 100vw;
-}
+    width: 100%;
+   }
+   article {
+    text-align: center;
+   }
+   html {
+    background-color: black;
+    }
+   .nav-text {
+    display: none;
+   } 
 }
 
 @media screen and (min-width: 834px) {
 
+    .phone-screen-title {
+        display: none;
+    }
+
     article {
         padding: 3rem 3rem;
+        text-align: center;
     }
 
     html {
@@ -252,6 +278,10 @@ body::-webkit-scrollbar-thumb {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
     }
 
     .social-links {
@@ -259,6 +289,35 @@ body::-webkit-scrollbar-thumb {
     }
     .contact-me-social {
         padding-right: 7rem;
+    }
+    .contact-info h1 {
+        margin-top: 1rem;
+        padding: 0;
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .contact-info h3 {
+        font-size: 1rem;
+        padding: 0;
+    }
+    .contact-info {
+        background-color: #191b1cc0; 
+    }
+    .nav-text {
+        color: white;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: .7rem;
+        text-align: center;
+        border-bottom: white solid 1px;
+    }
+
+
+    nav a {
+        height: 40px;
+        margin: 0;
+        padding: 0;
     }
     
 }
