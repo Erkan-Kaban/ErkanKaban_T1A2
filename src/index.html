@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erkan Kaban - Portfolio</title>
-    <link rel="stylesheet" href="./styles/stylesheet.css">
+    <link rel="stylesheet" href="../src/stylesheet-index/stylesheet.css">
 </head>
 <body>
     <!--Navigation Bar-->
@@ -13,9 +13,9 @@
         <p class="portfolio-logo"><img src="./images/portfolio-icon.svg" alt=""></p>
         <!-- <img id="portfolio-logo" src="./images/ek.png" alt="portfolio-logo"> -->
         <nav>
-            <a href=""><img class="highlighted-logo" src="./images/home-page-logo.svg" alt="home-page-logo"></a>
+            <a href=""><img class="nav-logo" src="./images/home-page-logo.svg" alt="home-page-logo"></a>
             <p class="nav-text">HOME</p>
-            <a href=""><img class="nav-logo" src="./images/experience-logo.svg" alt="experience-logo"></a>
+            <a href=""><img class="highlighted-logo" src="./images/experience-logo.svg" alt="experience-logo"></a>
             <p class="nav-text">EXPERIENCE</p>
             <a href=""><img class="nav-logo" src="./images/projects-logo.svg" alt="projects-logo"></a>
             <p class="nav-text">PROJECTS</p>
@@ -35,32 +35,67 @@
                 <h3>+61 407 491 941</h3>
             </div>
         </section>
+
+
         <!-- Sections containing each header and writing -->
-        <section>
+        <section class="contents-display-single-row">
             <article>
                 <heading class="phone-screen-title"><h1>ERKAN KABAN <br> FULL STACK DEVELOPER</h1> </heading>
                 <h4 class="contact-details">E: erkankaban90@gmail.com    /    M: +61 407 491 941</h4>
-                <h2 class="about-me-top">about me</h2>
-                
-                <p>Hi! my name is Erkan, I'm currently living in Melbourne and on a journey to becoming a full stack developer, I'm learning daily in regards to coding and how
-                a website is formed together. From the age of 12 I would install linux OS operating systems and sometimes try and install os from scratch and had a fascination for code
-                and how we communicate from human to computer via terminal. 
+                <h2 class="about-me-top">About</h2>
+                <img class="article-icon" src="./images/icon-me.svg" alt="">
+                <p>
+                    Hi! my name is Erkan, I'm currently living in Melbourne and on a journey to becoming a full stack developer, I'm learning daily in regards to coding and how
+                    a website is formed together. From the age of 12 I would install linux OS operating systems and sometimes try and install os from scratch and had a fascination for code
+                    and how we communicate from human to computer via terminal. 
                 </p>
             </article>
-            <article>
+        </section>
+
+        <section class="contents-display-double-row">
+            <article class="wide-screen-border-settings">
                 <h3>Why a career change into full stack developer?</h3>
-                <img class="article-icon" src="./images/developer-icon.svg">
+                <img class="article-icon" src="./images/developer-icon.svg" alt="">
+                
                 <p>I wanted to follow my deep core memory of what used to make me hyped and excited to do a certain activity and that was
                     coding. My past career choices also didn't align with my wants and needs. I've heard alot of good things about the coding work culture, 
                     and the flexibilities of working as a developer.
                 </p>
             </article>
-            <article>
+            <article class="wide-screen-border-settings">
                 <h3>What are your hobbies?</h3>
-                <img class="article-icon" src="./images/hobbies-icon.svg">
-                <p>I love to code, read books, Weightlifting, marathon running, video-gaming, socialising</p>
+                <img class="article-icon" src="./images/hobbies-icon.svg" alt="">
+                <p>I love to code, read books, Weightlifting, marathon running, video-gaming, socialising
+                </p>
             </article>
-                <h3 class="contact-me-social">Contact me on social media!</h3>
+            <article class="wide-screen-border-settings">
+                <h3>Where in the world have you traveled?</h3>
+                <img class="article-icon" src="./images/location-icon.svg" alt="">
+                <p>I've travelled to Japan, Bali, Turkey, New-Caledonia, Thailand, I've been to lots of locations around Victoria, visited South Australia, Queensland and Sydney.
+                </p>
+            </article>
+            <article class="wide-screen-border-settings">
+                <h3>Interesting fact about you</h3>
+                <img class="article-icon" src="./images/interest-icon.svg" alt="">
+                <p>I'm born Australian but Turkish by background, I've run a 21km Marathon and have done some weight lifting competitions. I used to work as an Aicraft Mechanical Engineer
+                   for Qantas Engineering, my favourite place I've ever been to was New-Caledonia.
+                </p>
+            </article>
+        </section>
+
+        <section class="contents-display-single-row">
+            <article>
+                <h3>Experience in coding</h3>
+                <img class="article-icon" src="./images/xp-logo.svg" alt="">
+                <p><b>HTML/CSS:</b> Beginner to Intermediate <br>
+                 <b>Javascript:</b> Basics <br>
+                 <b>Java:</b> Basics<br>
+                 <b>C#:</b> Basics</p>
+            </article>
+        </section>
+        <!-- bottom section - contact with social media -->
+        <section class="contents-display-single-row">
+            <h3>Contact me on social media!</h3>
             <article id="social-class">
                 <a href="https://www.facebook.com/ekabannn"><img class="social-links" alt="" src="./images/icons8-facebook-64.svg"></a>
                 <a href="https://github.com/Erkan-Kaban"><img class="social-links" src="./images/icons8-github.svg" alt=""></a>
