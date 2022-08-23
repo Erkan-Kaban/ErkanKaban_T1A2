@@ -21,6 +21,7 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
     color: white;
 }
 
+
 .highlighted-logo {
     filter: $highlighted-logo-filter-value;
     @include logo-size-mobile();
@@ -164,13 +165,14 @@ body::-webkit-scrollbar-thumb {
     filter: $non-highlighted-logo-filter-value;
     height: 64px;
     width: 64px;
-    margin-right: 2rem;
+    margin-right: 0.2rem;
     padding-right: 1rem;
 }
 
 .social-links:hover {
     filter: $highlighted-logo-filter-value;
 }
+
 #social-class {
     display: flex;
     flex-direction: row;
@@ -233,9 +235,57 @@ body::-webkit-scrollbar-thumb {
     width: 10px;
     height: 10px;
    }
+   .resume-hover:hover {
+    filter: $highlighted-logo-filter-value;
+    text-decoration: none;
+    }
+    a {
+    text-decoration: none;
+    }
+    .contents-display-single-row h3{
+        margin: 0;
+        background-color: #191b1c;
+        padding-top: 2rem;
+    }
+    .resume-hover {
+        filter: $non-highlighted-logo-filter-value;
+    }
 }
 
 @media screen and (min-width: 834px) {
+    .resume-hover {
+        filter: $non-highlighted-logo-filter-value;
+        
+    }
+    .resume-hover:hover {
+        filter: $highlighted-logo-filter-value;
+        text-decoration: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    .align-left {
+        text-align: left;
+    }
+    article {
+        padding: 3rem 3rem 3rem 3rem;
+    }
+    .contents-display-single-row {
+        border-right: solid 1px #494a4b;
+        margin-left: 50%;
+        width: 60vw;
+        background: #191b1c;  
+        text-align: center;
+    }
+
+    .contents-display-double-row { // flexed the contents of each block being article, row wrapped
+        display: flex;
+        flex-direction: row;
+        width: 60vw;
+        flex-wrap: wrap;
+        margin-left: 50%; // pushes the contents past my profile photo to the right
+       
+    }
     .contact-details {
         display: none;
     }
@@ -244,9 +294,14 @@ body::-webkit-scrollbar-thumb {
         display: none;
     }
 
-    article {
+    .wide-screen-border-settings {
+       
+        border-right: solid #494a4b 1px; // border let it stack correctly?
         padding: 3rem 3rem;
         text-align: center;
+        padding: 2rem;
+        width: 30vw; // chages the actual content size of each article
+        // margin-left: 50%;
     }
 
     html {
@@ -269,16 +324,10 @@ body::-webkit-scrollbar-thumb {
         width: 100%
     }
 
-    article {
-        padding: 2rem;
-        width: 60vw;
-        margin-left: 50%;
-        
-    }
 
     .contact-me-social {
-        width: 60vw;
-        margin-left: 50%;
+        width: 100vw;
+        
         padding-left: 8rem;
     }
 
@@ -330,5 +379,11 @@ body::-webkit-scrollbar-thumb {
         height: 40px;
         margin: 0;
         padding: 0;
+    }
+
+    h3 {
+        margin: 0;
+        padding-top: 2rem;
+        background: #191b1cc0; 
     }
 }

@@ -150,7 +150,7 @@ body::-webkit-scrollbar-thumb {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   height: 64px;
   width: 64px;
-  margin-right: 2rem;
+  margin-right: 0.2rem;
   padding-right: 1rem;
 }
 
@@ -218,17 +218,65 @@ body::-webkit-scrollbar-thumb {
     width: 10px;
     height: 10px;
   }
+  .resume-hover:hover {
+    filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .contents-display-single-row h3 {
+    margin: 0;
+    background-color: #191b1c;
+    padding-top: 2rem;
+  }
+  .resume-hover {
+    filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+  }
 }
 @media screen and (min-width: 834px) {
+  .resume-hover {
+    filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+  }
+  .resume-hover:hover {
+    filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
+    text-decoration: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .align-left {
+    text-align: left;
+  }
+  article {
+    padding: 3rem 3rem 3rem 3rem;
+  }
+  .contents-display-single-row {
+    border-right: solid 1px #494a4b;
+    margin-left: 50%;
+    width: 60vw;
+    background: #191b1c;
+    text-align: center;
+  }
+  .contents-display-double-row {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    flex-wrap: wrap;
+    margin-left: 50%;
+  }
   .contact-details {
     display: none;
   }
   .phone-screen-title {
     display: none;
   }
-  article {
+  .wide-screen-border-settings {
+    border-right: solid #494a4b 1px;
     padding: 3rem 3rem;
     text-align: center;
+    padding: 2rem;
+    width: 30vw;
   }
   html {
     background-color: black;
@@ -249,14 +297,8 @@ body::-webkit-scrollbar-thumb {
   p {
     width: 100%;
   }
-  article {
-    padding: 2rem;
-    width: 60vw;
-    margin-left: 50%;
-  }
   .contact-me-social {
-    width: 60vw;
-    margin-left: 50%;
+    width: 100vw;
     padding-left: 8rem;
   }
   .portfolio-section {
@@ -303,5 +345,10 @@ body::-webkit-scrollbar-thumb {
     height: 40px;
     margin: 0;
     padding: 0;
+  }
+  h3 {
+    margin: 0;
+    padding-top: 2rem;
+    background: rgba(25, 27, 28, 0.7529411765);
   }
 }/*# sourceMappingURL=stylesheet.css.map */
