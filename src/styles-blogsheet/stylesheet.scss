@@ -1,0 +1,370 @@
+$main-background-color-1: #191b1c;
+$non-highlighted-logo-filter-value: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+$highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@mixin logo-size-mobile {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.about-me-top { // added to blogs
+    border-top: solid #494a4b 1px; 
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+    //margin: 1.5rem 1rem;
+
+}
+@mixin display-flex-settings { // flex with column
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0; // defaulted some settings
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+
+.highlighted-logo { // highlights the logos in use
+    filter: $highlighted-logo-filter-value;
+    @include logo-size-mobile();
+    pointer-events: none;
+}
+
+header { // navbar settings
+    position: fixed;
+    border-right: solid #494a4b 1px;
+    @include display-flex-settings();
+    width: 75px;
+    height: 100%;
+    background: $main-background-color-1;
+    align-items: center;
+    min-height: 32rem;
+    top: 0; 
+}
+
+nav { // navbar settings
+    @include display-flex-settings();
+    justify-content: center;
+    padding-bottom: 1rem;
+    height: 100%;
+}
+
+.portfolio-logo { // main logo top left
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #00c483;
+    width: 100%;
+    padding: .2rem;
+    height: 75px;
+    font-size:xx-large;
+    font-family: 'Roboto', sans-serif;
+}
+
+.portfolio-logo img { // adjusted of image icon size.
+    width: 50px;
+}
+
+.nav-logo { // non highligthed color
+    @include logo-size-mobile();
+    filter: $non-highlighted-logo-filter-value;
+}
+
+.nav-logo:hover { // highlighted color
+    filter: $highlighted-logo-filter-value;
+}
+
+nav a { // adjustment of each link element
+    height: 9%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+main { // adjustments to the main box to position requirements
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 96.1%;
+    min-height: 100%;
+    height: 32rem;
+    left: 75px;
+}
+
+body { // removed any overflowing on the x-axis due to nav bar
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #00c483; 
+    text-align: center;
+    height: auto;
+    font-size: 1rem;
+    line-height: 2rem;
+    text-decoration: underline;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+    // margin: 1.5rem 1.5rem;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+section { // sizing up section and height adjustment
+   width: 100%;
+   height: auto;
+}
+
+p { // paragraph adjustments
+    color: #8f8d91;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    word-spacing: 3.5px;
+    padding-bottom: 1.5rem;
+}
+
+article { // article padding and background
+    background-color: $main-background-color-1;
+   // padding: 3rem 3rem 3rem 3rem;
+}
+
+
+h3 {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        text-align: center;
+        margin: 1.5rem 1.5rem;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+}
+
+
+body::-webkit-scrollbar { // added width to the scrollbar
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track { // scroll bar tracking background
+    background: #191b1c;
+}
+
+body::-webkit-scrollbar-thumb { // scroll bar tracking bar color
+    background: #494a4b;
+    border-radius: 20px;
+    border: 3px solid #191b1c;
+    
+}
+
+
+.social-links { // image social links adjustments
+    filter: $non-highlighted-logo-filter-value;
+    height: 64px;
+    width: 64px;
+    margin-right: 0.2rem;
+    padding-right: 1rem;
+}
+
+.social-links:hover { // hover color change in the icons
+    filter: $highlighted-logo-filter-value;
+}
+
+#social-class { // adjustment to the bottom of page for social class.
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 96.1%;
+    padding: 0;
+    border-right: #494a4b solid 1px;
+}
+
+.contents-display-double-row img {
+    display: block; 
+    padding-top: 2rem;
+    height: 5rem;
+    padding: 0;
+    filter: $non-highlighted-logo-filter-value;
+}
+
+.single-article-wide {
+    width: 100%; // chages the actual content size of each article
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-right: solid #494a4b 1px;
+    padding-bottom: auto; // changes content box size
+}
+
+.single-article-wide p {
+    padding: 2rem 4rem 2rem 3rem;
+    text-align: left;
+    
+}
+
+// smaller screens only ------------------
+@media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    
+   .portfolio-section {
+        display: none;
+   }
+
+   #social-class {
+        width: 96vw;
+   }
+   article {
+        text-align: center;
+   }
+   html {
+        background-color: black;
+    }
+   .nav-text {
+     display: none;
+   } 
+   .phone-screen-title {
+        margin: 1rem;
+   }
+
+    .contents-display-single-row h3{
+        display: flex;
+        margin: 0;
+        background-color: #191b1c;
+        padding-top: 2rem;
+        width: 96vw;
+        font-size: 1rem;
+        justify-content: center;
+        border-right: solid #494a4b 1px;
+    }
+}
+
+
+
+
+
+// Bigger screens and up -------------------------------
+@media screen and (min-width: 834px) {
+    .single-article-wide {
+        border-bottom: solid #494a4b 1px; // border let it stack correctly?
+        //padding: 3rem 3rem;
+        text-align: center;
+        padding: 2rem;
+        width: 100%; // chages the actual content size of each article
+        display: flex;
+        // flex-wrap: nowrap;
+        border-right: solid #494a4b 1px;
+        
+    }
+    .contact-info h1 {
+        text-decoration: none;
+    }
+
+    .contents-display-single-row {
+        border-right: solid 1px #494a4b;
+        margin-left: 50%;
+        width: 60vw;
+        background: #191b1c;  
+        text-align: center;
+        border-bottom: solid #494a4b .5px; 
+    }
+
+    .contents-display-double-row { // flexed the contents of each block being article, row wrapped
+        display: flex;
+        flex-direction: row;
+        width: 60vw;
+        flex-wrap: wrap;
+        margin-left: 50%; // pushes the contents past my profile photo to the right
+       
+    }
+    .contact-details {
+        display: none;
+    }
+
+    .phone-screen-title {
+        display: none;
+    }
+
+    html {
+        background-color: black;
+    }
+    header {
+        top: 10%;
+        height: 80%;
+    }
+    body, main {
+        margin-left: 3rem;
+        background-color: black;
+    }
+    main {
+        width: 50%;
+    }
+    #social-class {
+        width: 60vw;
+    }
+
+    .portfolio-section { // do not delete, main picture
+        position: fixed;
+        width: 25%;
+        height: 100%;
+        background-image: url(../images/ErkanK-2021-6719.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+    }
+
+    .social-links {
+        margin-left: 1.5rem;
+    }
+    
+    .contact-info h3 { // contact info for picture details below
+        font-size: 1rem;
+        padding: 0;
+    }
+    .contact-info {
+        padding: 1rem;
+        background-color: #191b1cc0; 
+    }
+    .nav-text {
+        color: white;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+        font-size: .7rem;
+        text-align: center;
+        border-bottom: white solid 1px;
+        text-align: center;
+    }
+
+
+    nav a { // leave nav stuff alone 
+        height: 40px;
+        margin: 0;
+        padding: 0;
+    }
+
+    h3 {
+        margin: 0;
+        padding-top: 2rem;
+        background: #191b1cc0; 
+    }
+    .about-me-top {
+        margin: 0rem;
+        padding-top: 1rem;
+        border: none;
+    }
+}
+
+
+

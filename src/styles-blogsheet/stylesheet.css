@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+.about-me-top {
+  border-top: solid #494a4b 1px;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 2rem 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+.highlighted-logo {
+  filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
+  height: 2.5rem;
+  width: 2.5rem;
+  pointer-events: none;
+}
+
+header {
+  position: fixed;
+  border-right: solid #494a4b 1px;
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  height: 100%;
+  background: #191b1c;
+  align-items: center;
+  min-height: 32rem;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1rem;
+  height: 100%;
+}
+
+.portfolio-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: #00c483;
+  width: 100%;
+  padding: 0.2rem;
+  height: 75px;
+  font-size: xx-large;
+  font-family: "Roboto", sans-serif;
+}
+
+.portfolio-logo img {
+  width: 50px;
+}
+
+.nav-logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+}
+
+.nav-logo:hover {
+  filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
+}
+
+nav a {
+  height: 9%;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 96.1%;
+  min-height: 100%;
+  height: 32rem;
+  left: 75px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  color: #00c483;
+  text-align: center;
+  height: auto;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-decoration: underline;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+section {
+  width: 100%;
+  height: auto;
+}
+
+p {
+  color: #8f8d91;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  word-spacing: 3.5px;
+  padding-bottom: 1.5rem;
+}
+
+article {
+  background-color: #191b1c;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+  margin: 1.5rem 1.5rem;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #191b1c;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #494a4b;
+  border-radius: 20px;
+  border: 3px solid #191b1c;
+}
+
+.social-links {
+  filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+  height: 64px;
+  width: 64px;
+  margin-right: 0.2rem;
+  padding-right: 1rem;
+}
+
+.social-links:hover {
+  filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
+}
+
+#social-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 96.1%;
+  padding: 0;
+  border-right: #494a4b solid 1px;
+}
+
+.contents-display-double-row img {
+  display: block;
+  padding-top: 2rem;
+  height: 5rem;
+  padding: 0;
+  filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+}
+
+.single-article-wide {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-right: solid #494a4b 1px;
+  padding-bottom: auto;
+}
+
+.single-article-wide p {
+  padding: 2rem 4rem 2rem 3rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 50px), screen and (max-width: 833px) {
+  .portfolio-section {
+    display: none;
+  }
+  #social-class {
+    width: 96vw;
+  }
+  article {
+    text-align: center;
+  }
+  html {
+    background-color: black;
+  }
+  .nav-text {
+    display: none;
+  }
+  .phone-screen-title {
+    margin: 1rem;
+  }
+  .contents-display-single-row h3 {
+    display: flex;
+    margin: 0;
+    background-color: #191b1c;
+    padding-top: 2rem;
+    width: 96vw;
+    font-size: 1rem;
+    justify-content: center;
+    border-right: solid #494a4b 1px;
+  }
+}
+@media screen and (min-width: 834px) {
+  .single-article-wide {
+    border-bottom: solid #494a4b 1px;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    border-right: solid #494a4b 1px;
+  }
+  .contact-info h1 {
+    text-decoration: none;
+  }
+  .contents-display-single-row {
+    border-right: solid 1px #494a4b;
+    margin-left: 50%;
+    width: 60vw;
+    background: #191b1c;
+    text-align: center;
+    border-bottom: solid #494a4b 0.5px;
+  }
+  .contents-display-double-row {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    flex-wrap: wrap;
+    margin-left: 50%;
+  }
+  .contact-details {
+    display: none;
+  }
+  .phone-screen-title {
+    display: none;
+  }
+  html {
+    background-color: black;
+  }
+  header {
+    top: 10%;
+    height: 80%;
+  }
+  body, main {
+    margin-left: 3rem;
+    background-color: black;
+  }
+  main {
+    width: 50%;
+  }
+  #social-class {
+    width: 60vw;
+  }
+  .portfolio-section {
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    background-image: url(../images/ErkanK-2021-6719.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .social-links {
+    margin-left: 1.5rem;
+  }
+  .contact-info h3 {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .contact-info {
+    padding: 1rem;
+    background-color: rgba(25, 27, 28, 0.7529411765);
+  }
+  .nav-text {
+    color: white;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    text-align: center;
+    border-bottom: white solid 1px;
+    text-align: center;
+  }
+  nav a {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  h3 {
+    margin: 0;
+    padding-top: 2rem;
+    background: rgba(25, 27, 28, 0.7529411765);
+  }
+  .about-me-top {
+    margin: 0rem;
+    padding-top: 1rem;
+    border: none;
+  }
+}/*# sourceMappingURL=stylesheet.css.map */
