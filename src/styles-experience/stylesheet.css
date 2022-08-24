@@ -329,6 +329,7 @@ body::-webkit-scrollbar-thumb {
   }
   .contact-info {
     background-color: rgba(25, 27, 28, 0.7529411765);
+    padding: 1rem;
   }
   .nav-text {
     color: white;
