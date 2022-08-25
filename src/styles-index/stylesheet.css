@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-/* footer paragraph adjustments */
-footer p { 
+/* footer settings */
+footer p {
   padding: 0;
   margin: 0;
   word-spacing: 0;
@@ -10,7 +10,7 @@ footer p {
   text-align: center;
 }
 
-/* default the whole page with this */
+/* whole page settings */
 * {
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@ footer p {
   color: white;
 }
 
-/* what a highlighted logo should look like and size */
+/* how a highlighted logo looks */
 .highlighted-logo {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 2.5rem;
@@ -27,7 +27,7 @@ footer p {
   pointer-events: none;
 }
 
-/* header section - consists navbar appearance */
+/* header settings */
 header {
   position: fixed;
   border-right: solid #494a4b 1px;
@@ -41,7 +41,7 @@ header {
   top: 0;
 }
 
-/* Adjustment of individual icons/links */
+/* nav settings */
 nav {
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ nav {
   height: 100%;
 }
 
-/* portfolio logo appearance */
+/* portfolio logo settings */
 .portfolio-logo {
   display: flex;
   justify-content: center;
@@ -64,24 +64,21 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
-/* image side of portfolio */
+/* portfolio image size */
 .portfolio-logo img {
   width: 50px;
 }
 
-/* how a logo should look when its not highlighted */
 .nav-logo {
   height: 2.5rem;
   width: 2.5rem;
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 }
 
-/* How a logo should look when highlighted */
 .nav-logo:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
-/* individual icon location settings */
 nav a {
   height: 9%;
   margin-bottom: 1.5rem;
@@ -89,7 +86,6 @@ nav a {
   justify-content: center;
 }
 
-/* main content and how it should be positioned */
 main {
   position: absolute;
   top: 0px;
@@ -100,12 +96,10 @@ main {
   left: 75px;
 }
 
-/* hid the scroll bar for a cleaner look */
 body {
   overflow-x: hidden;
 }
 
-/* heading 2 adjustments */
 h2 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -115,7 +109,6 @@ h2 {
   padding-bottom: 1rem;
 }
 
-/* section, paragraph, article and h3 adjustments */
 section {
   width: 100%;
   height: auto;
@@ -148,7 +141,6 @@ h3 {
   padding-bottom: 1rem;
 }
 
-/* scroll bar mods */
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -163,7 +155,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #191b1c;
 }
 
-/* social icons adjusteded and filtered  */
 .social-links {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   height: 64px;
@@ -172,12 +163,10 @@ body::-webkit-scrollbar-thumb {
   padding-right: 1rem;
 }
 
-/* social icons adjusteded and filtered  */
 .social-links:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
-/* adjustments for all the icons */
 #social-class {
   display: flex;
   flex-direction: row;
@@ -188,7 +177,6 @@ body::-webkit-scrollbar-thumb {
   background: #191b1c;
 }
 
-/* adjustment to each articles icon represented */
 .article-icon {
   filter: invert(100%) sepia(0%) saturate(7437%) hue-rotate(34deg) brightness(103%) contrast(103%);
   margin-bottom: 1rem;
@@ -196,7 +184,7 @@ body::-webkit-scrollbar-thumb {
   width: 64px;
 }
 
-/* small  screen adjustments */
+/* small screen settings */
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
   .portfolio-section {
     display: none;
@@ -230,7 +218,7 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 1rem;
   }
 }
-/* adjustment to bigger screens */
+/* large screen settings */
 @media screen and (min-width: 834px) {
   .contents-display-single-row h1 {
     display: none;
