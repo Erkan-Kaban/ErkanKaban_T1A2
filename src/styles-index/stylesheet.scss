@@ -1,4 +1,5 @@
 $main-background-color-1: #191b1c;
+$secondary-color: #00c483; 
 $non-highlighted-logo-filter-value: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
@@ -7,12 +8,25 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
     width: 2.5rem;
 }
 
-
-@mixin display-flex-settings {
+@mixin display-flex-settings-column {
     display: flex;
     flex-direction: column;
 }
 
+@mixin display-flex-settings-row {
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+    word-spacing: 0;
+    color: white;
+    background: $main-background-color-1;
+    width: 100%;
+    text-align: center;
+}
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +45,7 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
 header {
     position: fixed;
     border-right: solid #494a4b 1px;
-    @include display-flex-settings();
+    @include display-flex-settings-column();
     width: 75px;
     height: 100%;
     background: $main-background-color-1;
@@ -41,7 +55,7 @@ header {
 }
 
 nav {
-    @include display-flex-settings();
+    @include display-flex-settings-column();
     justify-content: center;
     padding-bottom: 1rem;
     height: 100%;
@@ -52,7 +66,7 @@ nav {
     justify-content: center;
     align-items: center;
     color: black;
-    background-color: #00c483;
+    background-color: $secondary-color;
     width: 100%;
     padding: .2rem;
     height: 75px;
@@ -94,14 +108,14 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
-    font-family: 'Roboto', sans-serif;
-    color: #00c483; 
-    text-align: center;
-    height: auto;
-    font-size: 1rem;
-    line-height: 2rem;
-}
+// h1 {
+//     font-family: 'Roboto', sans-serif;
+//     color: $secondary-color; 
+//     text-align: center;
+//     height: auto;
+//     font-size: 1rem;
+//     line-height: 2rem;
+// }
 
 h2 {
     font-family: 'Roboto', sans-serif;
@@ -131,7 +145,8 @@ p {
 article {
     background-color: $main-background-color-1;
     padding: 3rem 3rem 2rem 0.5rem;
-    border-bottom: solid #494a4b .5px; 
+    border-bottom: solid #494a4b 1px; 
+    text-align: center;
 }
 
 
@@ -143,7 +158,6 @@ h3 {
         font-size: 1.5rem;
         padding-bottom: 1rem;
 }
-
 
 body::-webkit-scrollbar {
     width: 12px;
@@ -174,33 +188,12 @@ body::-webkit-scrollbar-thumb {
 }
 
 #social-class {
-    display: flex;
-    flex-direction: row;
+    @include display-flex-settings-row();
     justify-content: center;
     width: 96.1%;
     padding: 0;
-    border-right: #494a4b solid 1px;
-}
-
-
-#social-class p {
-    color: white;
-    flex: 1;
-    width: 100%;
-}
-
-.contact-me-social {
-    width: 96.1%;
-    font-size: 1.3rem;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    color: white;
-    // padding: 0;
-    width: 100%;
-    background-color: #191b1c;
-    padding-top: 2rem;
-    margin: auto;
-    padding-right: 3rem;
+    z-index: 2;
+    background: $main-background-color-1;
 }
 
 .article-icon {
@@ -210,37 +203,25 @@ body::-webkit-scrollbar-thumb {
     width: 64px;
 }
 
+
+
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    
    .portfolio-section {
         display: none;
    }
    #social-class {
     width: 100%;
+    border: none;
    }
-   article {
-    text-align: center;
-   }
-   html {
-    background-color: black;
-    }
    .nav-text {
     display: none;
    } 
-   .phone-screen-title {
-    margin: 1rem;
-   }
-   .contact-me-icon {
-    display: inline-flex;
-   }
    img .contact-me-icon {
     width: 10px;
     height: 10px;
    }
-   .resume-hover:hover {
-    filter: $highlighted-logo-filter-value;
-    text-decoration: none;
-    }
-    a {
+  a {
     text-decoration: none;
     }
     .contents-display-single-row h3{
@@ -248,25 +229,34 @@ body::-webkit-scrollbar-thumb {
         background-color: #191b1c;
         padding-top: 2rem;
     }
-    .resume-hover {
-        filter: $non-highlighted-logo-filter-value;
+    .contents-display-single-row h1 {
+        font-family: 'Roboto', sans-serif;
+        color: $secondary-color; 
+        text-align: center;
+        height: auto;
+        font-size: 1rem;
+        line-height: 2rem;
+        padding-bottom: 1rem;
     }
+    
 }
 
 @media screen and (min-width: 834px) {
-    .resume-hover {
-        filter: $non-highlighted-logo-filter-value;
-        
+    .contents-display-single-row h1 {
+        display: none;
     }
-    .resume-hover:hover {
-        filter: $highlighted-logo-filter-value;
-        text-decoration: none;
+
+    .contact-info h1 {
+        font-family: 'Roboto', sans-serif;
+        color: $secondary-color; 
+        text-align: center;
+        height: auto;
+        font-size: 1rem;
+        line-height: 2rem;
     }
+
     a {
         text-decoration: none;
-    }
-    .align-left {
-        text-align: left;
     }
     article {
         padding: 3rem 3rem 3rem 3rem;
@@ -280,8 +270,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .contents-display-double-row { // flexed the contents of each block being article, row wrapped
-        display: flex;
-        flex-direction: row;
+        @include display-flex-settings-row();
         width: 60vw;
         flex-wrap: wrap;
         margin-left: 50%; // pushes the contents past my profile photo to the right
@@ -296,7 +285,6 @@ body::-webkit-scrollbar-thumb {
     }
 
     .wide-screen-border-settings {
-       
         border-right: solid #494a4b 1px; // border let it stack correctly?
         padding: 3rem 3rem;
         text-align: center;
@@ -320,19 +308,14 @@ body::-webkit-scrollbar-thumb {
     }
     #social-class {
         width: 60vw;
+        border-right: solid 1px #494a4b;
     }
     p {
         width: 100%
     }
 
-
-    .contact-me-social {
-        width: 100vw;
-        
-        padding-left: 8rem;
-    }
-
     .portfolio-section {
+        @include display-flex-settings-column();
         position: fixed;
         width: 25%;
         height: 100%;
@@ -340,8 +323,6 @@ body::-webkit-scrollbar-thumb {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
         justify-content: flex-end;
 
     }
@@ -349,15 +330,14 @@ body::-webkit-scrollbar-thumb {
     .social-links {
         margin-left: 1.5rem;
     }
-    .contact-me-social {
-        padding-right: 7rem;
-    }
-    .contact-info h1 {
+  
+    .contact-info  {
         margin-top: 1rem;
         padding: 0;
         width: 100%;
         font-size: 1.5rem;
     }
+    
     .contact-info h3 {
         font-size: 1rem;
         padding: 0;
@@ -375,7 +355,6 @@ body::-webkit-scrollbar-thumb {
         text-align: center;
         border-bottom: white solid 1px;
     }
-
 
     nav a {
         height: 40px;

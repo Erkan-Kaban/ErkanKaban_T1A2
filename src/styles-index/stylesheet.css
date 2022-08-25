@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* footer paragraph adjustments */
+footer p { 
+  padding: 0;
+  margin: 0;
+  word-spacing: 0;
+  color: white;
+  background: #191b1c;
+  width: 100%;
+  text-align: center;
+}
+
+/* default the whole page with this */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +19,7 @@
   color: white;
 }
 
+/* what a highlighted logo should look like and size */
 .highlighted-logo {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 2.5rem;
@@ -14,6 +27,7 @@
   pointer-events: none;
 }
 
+/* header section - consists navbar appearance */
 header {
   position: fixed;
   border-right: solid #494a4b 1px;
@@ -27,6 +41,7 @@ header {
   top: 0;
 }
 
+/* Adjustment of individual icons/links */
 nav {
   display: flex;
   flex-direction: column;
@@ -35,6 +50,7 @@ nav {
   height: 100%;
 }
 
+/* portfolio logo appearance */
 .portfolio-logo {
   display: flex;
   justify-content: center;
@@ -48,20 +64,24 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
+/* image side of portfolio */
 .portfolio-logo img {
   width: 50px;
 }
 
+/* how a logo should look when its not highlighted */
 .nav-logo {
   height: 2.5rem;
   width: 2.5rem;
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 }
 
+/* How a logo should look when highlighted */
 .nav-logo:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
+/* individual icon location settings */
 nav a {
   height: 9%;
   margin-bottom: 1.5rem;
@@ -69,6 +89,7 @@ nav a {
   justify-content: center;
 }
 
+/* main content and how it should be positioned */
 main {
   position: absolute;
   top: 0px;
@@ -79,19 +100,12 @@ main {
   left: 75px;
 }
 
+/* hid the scroll bar for a cleaner look */
 body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-family: "Roboto", sans-serif;
-  color: #00c483;
-  text-align: center;
-  height: auto;
-  font-size: 1rem;
-  line-height: 2rem;
-}
-
+/* heading 2 adjustments */
 h2 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -101,6 +115,7 @@ h2 {
   padding-bottom: 1rem;
 }
 
+/* section, paragraph, article and h3 adjustments */
 section {
   width: 100%;
   height: auto;
@@ -120,7 +135,8 @@ p {
 article {
   background-color: #191b1c;
   padding: 3rem 3rem 2rem 0.5rem;
-  border-bottom: solid #494a4b 0.5px;
+  border-bottom: solid #494a4b 1px;
+  text-align: center;
 }
 
 h3 {
@@ -132,6 +148,7 @@ h3 {
   padding-bottom: 1rem;
 }
 
+/* scroll bar mods */
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -146,6 +163,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #191b1c;
 }
 
+/* social icons adjusteded and filtered  */
 .social-links {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   height: 64px;
@@ -154,38 +172,23 @@ body::-webkit-scrollbar-thumb {
   padding-right: 1rem;
 }
 
+/* social icons adjusteded and filtered  */
 .social-links:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
+/* adjustments for all the icons */
 #social-class {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 96.1%;
   padding: 0;
-  border-right: #494a4b solid 1px;
+  z-index: 2;
+  background: #191b1c;
 }
 
-#social-class p {
-  color: white;
-  flex: 1;
-  width: 100%;
-}
-
-.contact-me-social {
-  width: 96.1%;
-  font-size: 1.3rem;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  color: white;
-  width: 100%;
-  background-color: #191b1c;
-  padding-top: 2rem;
-  margin: auto;
-  padding-right: 3rem;
-}
-
+/* adjustment to each articles icon represented */
 .article-icon {
   filter: invert(100%) sepia(0%) saturate(7437%) hue-rotate(34deg) brightness(103%) contrast(103%);
   margin-bottom: 1rem;
@@ -193,35 +196,21 @@ body::-webkit-scrollbar-thumb {
   width: 64px;
 }
 
+/* small  screen adjustments */
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
   .portfolio-section {
     display: none;
   }
   #social-class {
     width: 100%;
-  }
-  article {
-    text-align: center;
-  }
-  html {
-    background-color: black;
+    border: none;
   }
   .nav-text {
     display: none;
   }
-  .phone-screen-title {
-    margin: 1rem;
-  }
-  .contact-me-icon {
-    display: inline-flex;
-  }
   img .contact-me-icon {
     width: 10px;
     height: 10px;
-  }
-  .resume-hover:hover {
-    filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
-    text-decoration: none;
   }
   a {
     text-decoration: none;
@@ -231,23 +220,31 @@ body::-webkit-scrollbar-thumb {
     background-color: #191b1c;
     padding-top: 2rem;
   }
-  .resume-hover {
-    filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+  .contents-display-single-row h1 {
+    font-family: "Roboto", sans-serif;
+    color: #00c483;
+    text-align: center;
+    height: auto;
+    font-size: 1rem;
+    line-height: 2rem;
+    padding-bottom: 1rem;
   }
 }
+/* adjustment to bigger screens */
 @media screen and (min-width: 834px) {
-  .resume-hover {
-    filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
+  .contents-display-single-row h1 {
+    display: none;
   }
-  .resume-hover:hover {
-    filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
-    text-decoration: none;
+  .contact-info h1 {
+    font-family: "Roboto", sans-serif;
+    color: #00c483;
+    text-align: center;
+    height: auto;
+    font-size: 1rem;
+    line-height: 2rem;
   }
   a {
     text-decoration: none;
-  }
-  .align-left {
-    text-align: left;
   }
   article {
     padding: 3rem 3rem 3rem 3rem;
@@ -294,15 +291,14 @@ body::-webkit-scrollbar-thumb {
   }
   #social-class {
     width: 60vw;
+    border-right: solid 1px #494a4b;
   }
   p {
     width: 100%;
   }
-  .contact-me-social {
-    width: 100vw;
-    padding-left: 8rem;
-  }
   .portfolio-section {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     width: 25%;
     height: 100%;
@@ -310,17 +306,12 @@ body::-webkit-scrollbar-thumb {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
   }
   .social-links {
     margin-left: 1.5rem;
   }
-  .contact-me-social {
-    padding-right: 7rem;
-  }
-  .contact-info h1 {
+  .contact-info {
     margin-top: 1rem;
     padding: 0;
     width: 100%;
