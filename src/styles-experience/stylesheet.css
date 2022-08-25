@@ -147,7 +147,7 @@ h3 {
   font-size: 1.5rem;
   padding-bottom: 1rem;
 }
-
+/* scroll bar modifications */
 body::-webkit-scrollbar {
   width: 12px;
 }

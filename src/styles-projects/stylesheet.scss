@@ -1,4 +1,5 @@
 $main-background-color-1: #191b1c;
+$secondary-color: #00c483; 
 $non-highlighted-logo-filter-value: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
@@ -8,9 +9,25 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
 }
 
 
-@mixin display-flex-settings {
+@mixin display-flex-settings-column {
     display: flex;
     flex-direction: column;
+}
+
+@mixin display-flex-settings-row {
+    display: flex;
+    flex-direction: row;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+    word-spacing: 0;
+    color: white;
+    background: $main-background-color-1;
+    width: 100%;
+    text-align: center;
+    border: none;
 }
 
 * {
@@ -31,7 +48,7 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
 header {
     position: fixed;
     border-right: solid #494a4b 1px;
-    @include display-flex-settings();
+    @include display-flex-settings-column();
     width: 75px;
     height: 100%;
     background: $main-background-color-1;
@@ -41,7 +58,7 @@ header {
 }
 
 nav {
-    @include display-flex-settings();
+    @include display-flex-settings-column();
     justify-content: center;
     padding-bottom: 1rem;
     height: 100%;
@@ -52,7 +69,7 @@ nav {
     justify-content: center;
     align-items: center;
     color: black;
-    background-color: #00c483;
+    background-color: $secondary-color;
     width: 100%;
     padding: .2rem;
     height: 75px;
@@ -96,7 +113,7 @@ body {
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    color: #00c483; 
+    color: $secondary-color; 
     text-align: center;
     height: auto;
     font-size: 1rem;
@@ -174,20 +191,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 #social-class {
-    display: flex;
-    flex-direction: row;
+    @include display-flex-settings-row();
     justify-content: center;
     width: 96.1%;
     padding: 0;
     border-right: #494a4b solid 1px;
 }
 
-
-#social-class p {
-    color: white;
-    flex: 1;
-    width: 100%;
-}
 
 .contact-me-social {
     width: 96.1%;
@@ -226,22 +236,6 @@ body::-webkit-scrollbar-thumb {
 
 // smaller screens only ------------------
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
-    
-    .article-row-padding { 
-        border-right: solid #494a4b 1px; // border let it stack correctly?
-        padding: 3rem;
-        text-align: center;
-        width: 100%; // chages the actual content size of each article
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .article-icon-horizontal{
-        filter: invert(100%) sepia(0%) saturate(7437%) hue-rotate(34deg) brightness(103%) contrast(103%);
-        width: 512px;
-        width: 100%;
-    }
    .portfolio-section {
         display: none;
    }
@@ -256,64 +250,26 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 1.5rem;
    }
    #social-class {
-        width: 100vw;;
+        width: 100vw;
+        border: none;
    }
    article {
         text-align: center;
    }
-   html {
-        background-color: black;
-    }
    .nav-text {
      display: none;
    } 
    .phone-screen-title {
         margin: 1rem;
    }
-   .contact-me-icon {
-        display: inline-flex;
-   }
-   img .contact-me-icon {
-        width: 10px;
-        height: 10px;
-   }
-   .resume-hover:hover {
-        filter: $highlighted-logo-filter-value;
-        text-decoration: none;
-    }
-    a {
-    text-decoration: none;
-    }
-    .contents-display-single-row h3{
-        margin: 0;
-        background-color: #191b1c;
-        padding-top: 2rem;
-        width: 100vw;
-    }
-    .resume-hover {
-        filter: $non-highlighted-logo-filter-value;
-    }
+
+    
     
 }
 
 
-
-
-
 // Bigger screens and up -------------------------------
 @media screen and (min-width: 834px) {
-    
-    .resume-hover {
-        filter: $non-highlighted-logo-filter-value;
-        
-    }
-    .resume-hover:hover {
-        filter: $highlighted-logo-filter-value;
-        text-decoration: none;
-    }
-    a {
-        text-decoration: none;
-    }
    
     article {
         padding: 3rem 3rem 3rem 3rem;
@@ -328,8 +284,7 @@ body::-webkit-scrollbar-thumb {
         align-items: center;
     }
     .contents-display-single-row-projects {
-        display: flex;
-        flex-direction: row;
+        @include display-flex-settings-row();
         width: 60vw;
         flex-wrap: wrap;
         margin-left: 50%; // pushes the contents past my profile photo to the right
@@ -343,8 +298,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .contents-display-double-row { // flexed the contents of each block being article, row wrapped
-        display: flex;
-        flex-direction: row;
+        @include display-flex-settings-row();
         width: 60vw;
         flex-wrap: wrap;
         margin-left: 50%; // pushes the contents past my profile photo to the right
@@ -385,6 +339,8 @@ body::-webkit-scrollbar-thumb {
     }
     #social-class {
         width: 60vw;
+        border: none;
+        border-right: solid #494a4b 1px;
     }
     p {
         width: 100%
