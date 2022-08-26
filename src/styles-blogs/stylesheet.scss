@@ -221,12 +221,13 @@ article {
 
 
 
-@media only screen and (max-width: 489px){
+@media only screen and (max-width: 380px){
     footer p {
         padding-right: 2rem;
     }
     .contact-details {
-       width: 90%;
+       width: 80%;
+       padding-left: 1rem;
     }
     article {
         padding-right: 4rem;
@@ -236,7 +237,7 @@ article {
     }
     .about-me-top {
         padding: 0;
-        padding-right: 2rem;
+        padding-right: 5rem;
         
     }
     .single-article-wide img {
@@ -245,15 +246,33 @@ article {
     }
     .single-article-wide h1 {
         padding-top: 1rem;
-        padding-right: 3rem;
+        padding-right: 5rem;
     }
     #social-class {
         padding-right: 2rem;
     }
+    article {
+        padding: 0rem;
+    }
+    article h1 {
+        padding-right: 1rem;
+    }
+    .contents-display-single-row {
+        padding: 0;
+    }
+    .phone-screen-title h1{
+        text-align: center;
+        padding-right: 3rem;
+    }
+    .single-article-wide h1 {
+        padding-left: 2rem;
+    }
 }
 // smaller screens only ------------------
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
-  
+    .about-me-top {
+        padding-right: 1rem;
+    }
     main {
         position: fixed;
         overflow-y: scroll;

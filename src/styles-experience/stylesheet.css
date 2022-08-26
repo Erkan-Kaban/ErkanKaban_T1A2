@@ -183,6 +183,9 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+  .contact-details {
+    padding-top: 1rem;
+  }
   footer p {
     padding-right: 2rem;
   }
@@ -329,7 +332,6 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5rem;
   }
   .contact-info h3 {
-    font-size: 1rem;
     padding: 0;
   }
   .contact-info {

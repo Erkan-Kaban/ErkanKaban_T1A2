@@ -217,16 +217,35 @@ body::-webkit-scrollbar-thumb {
   h1 {
     padding-right: 2rem;
   }
+  .contents-display-single-row {
+    width: 96.1%;
+    padding: 0;
+    margin: 0;
+  }
+  article {
+    padding-top: 0rem;
+  }
+  .mobile-friendly {
+    padding: 0;
+  }
   .contact-details {
-    text-align: left;
-    padding-left: 0.7rem;
-    font-size: 0.8rem;
+    text-align: center;
+    width: 80%;
+    padding-left: 2rem;
+  }
+  .about-me-top {
+    border: none;
+    padding-top: 0rem;
+    font-size: 3rem;
+  }
+  .single-article-wide img {
+    padding-top: 1rem;
+  }
+  .mobile-friendly {
+    padding: 0;
   }
 }
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
-  .contact-details {
-    width: 96.1%;
-  }
   main {
     position: fixed;
     overflow-y: scroll;

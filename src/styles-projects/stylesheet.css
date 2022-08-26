@@ -204,6 +204,13 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (max-width: 400px) {
   footer p {
+    margin: 0;
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+    margin: 0;
+    width: 100%;
     padding-right: 2rem;
   }
   .contents-display-single-row-projects {
@@ -246,7 +253,7 @@ body::-webkit-scrollbar-thumb {
     border: none;
   }
   article {
-    padding-top: 1rem;
+    padding: 0rem 3rem 1rem 1rem;
     width: 96.1%;
   }
   h3 {
