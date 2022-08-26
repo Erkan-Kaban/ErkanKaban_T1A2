@@ -226,18 +226,52 @@ body::-webkit-scrollbar-thumb { // scroll bar tracking bar color
     
 }
 
+@media only screen and (max-width: 400px) {
+    #social-class {
+        padding-right: 2rem;
+    }
+    footer p {
+        padding-right: 2rem;
+    }
+    .about-me-top {
+        padding-right: 5rem;
+    }
+    h1 {
+        padding-right: 2rem;
+    }
+    .contact-details {
+        text-align: left;
+        padding-left: 0.7rem;
+        font-size: 0.8rem;
+        
+    }
+}
 // smaller screens only ------------------
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
     
+    .contact-details {
+        width: 96.1%;
+    }
+    main {
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .single-article-wide img {
+        padding-right: 4rem;
+
+    }
    .portfolio-section {
         display: none;
    }
 
    #social-class {
         width: 96vw;
+        padding-top: 1rem;
    }
    article {
         text-align: center;
+        padding-top: 1rem;
    }
 
    .nav-text {
@@ -256,6 +290,9 @@ body::-webkit-scrollbar-thumb { // scroll bar tracking bar color
         font-size: 1rem;
         justify-content: center;
         border-right: solid #494a4b 1px;
+    }
+    p {
+        border: none;
     }
 }
 
@@ -320,6 +357,7 @@ body::-webkit-scrollbar-thumb { // scroll bar tracking bar color
     }
     #social-class {
         width: 60vw;
+        padding-top: 1rem;
     }
 
     .portfolio-section { // do not delete, main picture

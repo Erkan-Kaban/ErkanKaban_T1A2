@@ -108,14 +108,6 @@ body {
     overflow-x: hidden;
 }
 
-// h1 {
-//     font-family: 'Roboto', sans-serif;
-//     color: $secondary-color; 
-//     text-align: center;
-//     height: auto;
-//     font-size: 1rem;
-//     line-height: 2rem;
-// }
 
 h2 {
     font-family: 'Roboto', sans-serif;
@@ -204,15 +196,38 @@ body::-webkit-scrollbar-thumb {
 }
 
 
-
-@media only screen and (max-width: 50px), screen and (max-width: 833px) {
+@media only screen and (max-width: 400px){
+    #social-class {
+        padding-right: 2rem;
+    }
     
+}
+@media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    p {
+        font-size: 1rem;
+    }
+    .contact-details {
+        width: 96.1%;
+    }
+    article {
+        padding-top: 1rem;
+    }
+    h3 {
+        position: relative;
+        padding-top: 1rem;
+        right: .5rem;
+    }
+    main {
+        position: fixed;
+        overflow-y: scroll;
+    }
    .portfolio-section {
         display: none;
    }
    #social-class {
     width: 100%;
     border: none;
+    padding-top: 1rem;
    }
    .nav-text {
     display: none;
@@ -238,10 +253,14 @@ body::-webkit-scrollbar-thumb {
         line-height: 2rem;
         padding-bottom: 1rem;
     }
+    footer p {
+        padding-right: 1rem;
+    }
     
 }
 
 @media screen and (min-width: 834px) {
+    
     .contents-display-single-row h1 {
         display: none;
     }
@@ -259,7 +278,7 @@ body::-webkit-scrollbar-thumb {
         text-decoration: none;
     }
     article {
-        padding: 3rem 3rem 3rem 3rem;
+        padding: 1rem 3rem 1rem 3rem;
     }
     .contents-display-single-row {
         border-right: solid 1px #494a4b;
@@ -307,11 +326,13 @@ body::-webkit-scrollbar-thumb {
         width: 50%;
     }
     #social-class {
+        padding-top: 1rem;
         width: 60vw;
         border-right: solid 1px #494a4b;
     }
+
     p {
-        width: 100%
+        width: 100%;
     }
 
     .portfolio-section {

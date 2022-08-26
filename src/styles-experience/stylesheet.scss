@@ -194,19 +194,44 @@ body::-webkit-scrollbar-thumb {
     border-right: #494a4b solid 1px;
 }
 
-
+@media only screen and (max-width: 400px){
+    #social-class {
+        padding-right: 2rem;
+    }
+}
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    footer p {
+        padding-right: 2rem;
+    }
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    article {
+        padding-top: 1rem;
+    }
+    h3 {
+        position: relative;
+        right: .5rem;
+    }
+    main {
+        position: fixed;
+        overflow-y: scroll;
+    }
     #social-class {
         border: none;
+        padding-top: 1rem;
     }
     .contact-details {
         text-align: center;
+        width: 96.1%;
     }
    .portfolio-section {
         display: none;
    }
    #social-class {
     width: 100%;
+    padding-top: 1rem;
    }
 
    .nav-text {
@@ -241,6 +266,7 @@ body::-webkit-scrollbar-thumb {
     #social-class {
         border: none;
         border-right: solid 1px #494a4b;
+        padding-top: 1rem;
     }
     .resume-hover {
         filter: $non-highlighted-logo-filter-value;
@@ -255,7 +281,7 @@ body::-webkit-scrollbar-thumb {
     }
    
     article {
-        padding: 3rem 3rem 3rem 3rem;
+        padding: 1rem 3rem 1rem 3rem;
     }
     .contents-display-single-row {
         border-right: solid 1px #494a4b;
@@ -361,5 +387,8 @@ body::-webkit-scrollbar-thumb {
         margin: 0;
         padding-top: 2rem;
         background: #191b1cc0; 
+    }
+    footer p {
+        padding-right: 1rem;
     }
 }

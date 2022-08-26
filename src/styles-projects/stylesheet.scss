@@ -1,5 +1,4 @@
 $main-background-color-1: #191b1c;
-$secondary-color: #00c483; 
 $non-highlighted-logo-filter-value: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
@@ -9,25 +8,9 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
 }
 
 
-@mixin display-flex-settings-column {
+@mixin display-flex-settings {
     display: flex;
     flex-direction: column;
-}
-
-@mixin display-flex-settings-row {
-    display: flex;
-    flex-direction: row;
-}
-
-footer p {
-    padding: 0;
-    margin: 0;
-    word-spacing: 0;
-    color: white;
-    background: $main-background-color-1;
-    width: 100%;
-    text-align: center;
-    border: none;
 }
 
 * {
@@ -48,7 +31,7 @@ footer p {
 header {
     position: fixed;
     border-right: solid #494a4b 1px;
-    @include display-flex-settings-column();
+    @include display-flex-settings();
     width: 75px;
     height: 100%;
     background: $main-background-color-1;
@@ -58,7 +41,7 @@ header {
 }
 
 nav {
-    @include display-flex-settings-column();
+    @include display-flex-settings();
     justify-content: center;
     padding-bottom: 1rem;
     height: 100%;
@@ -69,7 +52,7 @@ nav {
     justify-content: center;
     align-items: center;
     color: black;
-    background-color: $secondary-color;
+    background-color: #00c483;
     width: 100%;
     padding: .2rem;
     height: 75px;
@@ -113,7 +96,7 @@ body {
 
 h1 {
     font-family: 'Roboto', sans-serif;
-    color: $secondary-color; 
+    color: #00c483; 
     text-align: center;
     height: auto;
     font-size: 1rem;
@@ -191,13 +174,20 @@ body::-webkit-scrollbar-thumb {
 }
 
 #social-class {
-    @include display-flex-settings-row();
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     width: 96.1%;
     padding: 0;
     border-right: #494a4b solid 1px;
 }
 
+
+#social-class p {
+    color: white;
+    flex: 1;
+    width: 100%;
+}
 
 .contact-me-social {
     width: 96.1%;
@@ -234,8 +224,81 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+@media only screen and (max-width: 400px){
+    footer p {
+        padding-right: 2rem;
+    }
+    .contents-display-single-row-projects {
+        padding-right: 2rem;
+    }
+    .about-me-top {
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+    }
+    .wide-screen-border-settings {
+        padding-right: 5rem;
+    }
+    article {
+        padding-right: 5rem;
+    }
+    .article-row-padding {
+        right: 5rem;
+    }
+    #social-class {
+        padding-right: 3rem;
+    }
+}
 // smaller screens only ------------------
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    .contents-display-single-row-projects {
+        padding-right: 2rem;
+    }
+    main {
+        overflow-x: hidden;
+    }
+    
+     .contact-details {
+             width: 96.1%;
+     }
+    main {
+             position: fixed;
+             overflow-y: scroll;
+    }
+     
+     #social-class {
+     padding-top: 1rem;
+     border: none;
+     }
+     
+     article {
+     padding-top: 1rem;
+     width: 96.1%;
+     }
+     
+     h3 {
+     position: relative;
+     right: .5rem;
+     }
+     p {
+     font-size: 1rem;
+     text-align: center
+     }
+     
+    .article-row-padding { 
+        padding: 3rem;
+        text-align: center;
+        width: 100%; // chages the actual content size of each article
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .article-icon-horizontal{
+        filter: invert(100%) sepia(0%) saturate(7437%) hue-rotate(34deg) brightness(103%) contrast(103%);
+        width: 512px;
+        width: 100%;
+    }
    .portfolio-section {
         display: none;
    }
@@ -250,32 +313,65 @@ body::-webkit-scrollbar-thumb {
         padding-bottom: 1.5rem;
    }
    #social-class {
-        width: 100vw;
-        border: none;
+        width: 100vw;;
    }
    article {
         text-align: center;
    }
+   html {
+        background-color: #191b1c;
+    }
    .nav-text {
      display: none;
    } 
    .phone-screen-title {
         margin: 1rem;
    }
+   .contact-me-icon {
+        display: inline-flex;
+   }
+   img .contact-me-icon {
+        width: 10px;
+        height: 10px;
+   }
 
-    
+    a {
+    text-decoration: none;
+    }
+    .contents-display-single-row h3{
+        margin: 0;
+        background-color: #191b1c;
+        padding-top: 2rem;
+        width: 100vw;
+    }
+    footer p {
+        padding: 0;
+        word-spacing: none;
+        color: white;
+        font-size: 1rem;
+    }
     
 }
 
 
+
+
+
 // Bigger screens and up -------------------------------
 @media screen and (min-width: 834px) {
+
+    .article-row-padding {
+        border-right: solid #494a4b 1px; 
+    }
+
+    a {
+        text-decoration: none;
+    }
    
     article {
-        padding: 3rem 3rem 3rem 3rem;
+        padding: 1rem 3rem 1rem 3rem;
     }
     .article-row-padding {
-        border-right: solid #494a4b 1px; // border let it stack correctly?
         text-align: center;
         padding: .5rem;
         width: 20vw; // chages the actual content size of each article
@@ -284,7 +380,8 @@ body::-webkit-scrollbar-thumb {
         align-items: center;
     }
     .contents-display-single-row-projects {
-        @include display-flex-settings-row();
+        display: flex;
+        flex-direction: row;
         width: 60vw;
         flex-wrap: wrap;
         margin-left: 50%; // pushes the contents past my profile photo to the right
@@ -298,7 +395,8 @@ body::-webkit-scrollbar-thumb {
     }
 
     .contents-display-double-row { // flexed the contents of each block being article, row wrapped
-        @include display-flex-settings-row();
+        display: flex;
+        flex-direction: row;
         width: 60vw;
         flex-wrap: wrap;
         margin-left: 50%; // pushes the contents past my profile photo to the right
@@ -339,11 +437,12 @@ body::-webkit-scrollbar-thumb {
     }
     #social-class {
         width: 60vw;
-        border: none;
         border-right: solid #494a4b 1px;
+        padding-top: 1rem;
+        border-bottom: none;
     }
     p {
-        width: 100%
+        width: 100%;
     }
 
     .portfolio-section {
@@ -400,12 +499,11 @@ body::-webkit-scrollbar-thumb {
         padding-top: 2rem;
         background: #191b1cc0; 
     }
-}
-
-@media screen and (min-width: 1200px) {
-    .article-icon-horizontal-text {
-        margin: 0;
-        width: 100%;
+    footer p {
+        color: white;
+        padding: 0;
+        word-spacing: 0;
+        padding-left: .5rem;
     }
-
+    
 }

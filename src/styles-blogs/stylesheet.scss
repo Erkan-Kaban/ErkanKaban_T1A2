@@ -9,7 +9,6 @@ $highlighted-logo-filter-value: invert(59%) sepia(32%) saturate(5336%) hue-rotat
 }
 
 .about-me-top { // added to blogs
-    border-bottom: solid #494a4b 1px; 
     width: 100%;
     margin: 1.5rem 1rem;
 
@@ -54,7 +53,8 @@ header {
     background: $main-background-color-1;
     align-items: center;
     min-height: 32rem;
-    top: 0; 
+    top: 0;
+    border-bottom: none; 
 }
 
 nav {
@@ -125,7 +125,6 @@ h2 {
     font-family: 'Roboto', sans-serif;
     color: white;
     text-align: center;
-    // margin: 1.5rem 1.5rem;
     font-size: 3rem;
     padding-bottom: 1rem;
 }
@@ -201,7 +200,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .wide-screen-border-settings {
-    border-bottom: solid #494a4b 1px;
+    border-top: solid #494a4b 1px;
     padding: 3rem 3rem;
 }
 .wide-screen-border-settings img {
@@ -222,18 +221,64 @@ article {
 
 
 
-
+@media only screen and (max-width: 489px){
+    footer p {
+        padding-right: 2rem;
+    }
+    .contact-details {
+       width: 90%;
+    }
+    article {
+        padding-right: 4rem;
+    }
+    .wide-screen-border-settings {
+        padding-right: 6rem;
+    }
+    .about-me-top {
+        padding: 0;
+        padding-right: 2rem;
+        
+    }
+    .single-article-wide img {
+        width: 13rem;
+        padding-right: 1rem;
+    }
+    .single-article-wide h1 {
+        padding-top: 1rem;
+        padding-right: 3rem;
+    }
+    #social-class {
+        padding-right: 2rem;
+    }
+}
 // smaller screens only ------------------
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
-    
   
+    main {
+        position: fixed;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        background-color:#191b1c;
+    }
+    .contact-details {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .single-article-wide {
+        border-top:#494a4b solid 1px;
+        padding: 2rem 2rem;
+    }
    .portfolio-section {
         display: none;
    }
 
    #social-class {
-        width: 96vw;
+    border-top:#494a4b solid 1px;
+    padding-top: 1rem;
+    width: 96vw;
    }
+   
    article {
         text-align: center;
    }
@@ -268,7 +313,7 @@ article {
 // Bigger screens and up -------------------------------
 @media screen and (min-width: 834px) {
     .single-article-wide {
-        border-bottom: solid #494a4b 1px; // border let it stack correctly?
+        border-top: solid #494a4b 1px; // border let it stack correctly?
         padding: 3rem 3rem;
         text-align: center;
         padding: 2rem;
@@ -284,18 +329,13 @@ article {
         border: none;
     }
     
-   
-    article {
-        padding: 3rem 3rem 3rem 3rem;
-    }
-    
     .contents-display-single-row {
         border-right: solid 1px #494a4b;
         margin-left: 50%;
         width: 60vw;
         background: #191b1c;  
         text-align: center;
-        border-bottom: solid #494a4b .5px; 
+        border-top: solid #494a4b .5px; 
     }
 
     .contents-display-double-row { // flexed the contents of each block being article, row wrapped
@@ -315,7 +355,7 @@ article {
     }
 
     .wide-screen-border-settings { 
-        border-bottom: solid #494a4b 1px; // border let it stack correctly?
+        border-top: solid #494a4b 1px; // border let it stack correctly?
         border-right: solid #494a4b 1px;
         padding: 3rem 3rem;
         text-align: center;
@@ -342,6 +382,7 @@ article {
     }
     #social-class {
         width: 60vw;
+        padding-top: 1rem;
     }
     p {
         width: 100%
