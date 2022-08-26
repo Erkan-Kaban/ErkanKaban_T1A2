@@ -251,9 +251,6 @@ body::-webkit-scrollbar-thumb {
     overflow-y: scroll;
     overflow-x: hidden;
   }
-  .single-article-wide img {
-    padding-right: 4rem;
-  }
   .portfolio-section {
     display: none;
   }
