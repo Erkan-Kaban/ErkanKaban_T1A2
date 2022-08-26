@@ -57,9 +57,11 @@ Created using draw.io
 
 ## Blogs Post Page
 
+![](./docs/Blogs%20-%20Post%20-%20Combined.jpg)
+
 ![](./docs/Blogs%20Post%20Page%20-%20Wireframe.jpg)
 
-![](./docs/Blogs%20-%20Post%20-%20Combined.jpg)
+
 
 <hr />
 
