@@ -71,6 +71,7 @@ nav {
     height: 75px;
     font-size:xx-large;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
 .portfolio-logo img {
@@ -194,12 +195,21 @@ body::-webkit-scrollbar-thumb {
     border-right: #494a4b solid 1px;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 450px){
     #social-class {
         padding-right: 2rem;
     }
+   
+    .mobile-left-align {
+        margin-left: 2rem;
+        text-align: left;
+    }
 }
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    
+    .about-me-top {
+        font-size: 2rem;
+    }
     .contact-details {
         padding-top: 1rem;
     }
@@ -356,18 +366,20 @@ body::-webkit-scrollbar-thumb {
     }
     
     .contact-info h1 {
-        margin-top: 1rem;
         padding: 0;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        background: rgba(0,0,0,0.1);
     }
     .contact-info h3 {
         padding: 0;
         font-size: 1rem;
+        background: rgba(0,0,0,0.1);
     }
     .contact-info {
         background-color: #191b1cc0; 
         padding: 1rem;
+        background: rgba(0,0,0,0.5);
     }
     .nav-text {
         color: white;
@@ -390,8 +402,5 @@ body::-webkit-scrollbar-thumb {
         margin: 0;
         padding-top: 2rem;
         background: #191b1cc0; 
-    }
-    footer p {
-        padding-right: 1rem;
     }
 }

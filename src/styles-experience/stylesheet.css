@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* footer p tag settings as follows */
 footer p {
   padding: 0;
   margin: 0;
@@ -9,6 +10,7 @@ footer p {
   text-align: center;
 }
 
+/* default for the whole site */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +19,7 @@ footer p {
   color: white;
 }
 
+/* highlighted logo color and size settings */
 .highlighted-logo {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 2.5rem;
@@ -24,6 +27,7 @@ footer p {
   pointer-events: none;
 }
 
+/* header sized and to behave a certain way and look */
 header {
   position: fixed;
   border-right: solid #494a4b 1px;
@@ -37,6 +41,7 @@ header {
   top: 0;
 }
 
+/* each element in nav to behave a certain way flexed */
 nav {
   display: flex;
   flex-direction: column;
@@ -45,6 +50,7 @@ nav {
   height: 100%;
 }
 
+/* portfolio logo */
 .portfolio-logo {
   display: flex;
   justify-content: center;
@@ -56,12 +62,15 @@ nav {
   height: 75px;
   font-size: xx-large;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 
+/* img width adjustments */
 .portfolio-logo img {
   width: 50px;
 }
 
+/* nav settings */
 .nav-logo {
   height: 2.5rem;
   width: 2.5rem;
@@ -79,6 +88,7 @@ nav a {
   justify-content: center;
 }
 
+/* main adjustments */
 main {
   position: absolute;
   top: 0px;
@@ -89,10 +99,12 @@ main {
   left: 75px;
 }
 
+/* body hidden x scroll bar */
 body {
   overflow-x: hidden;
 }
 
+/* h1 adjusted */
 h1 {
   font-family: "Roboto", sans-serif;
   color: #00c483;
@@ -102,6 +114,7 @@ h1 {
   line-height: 2rem;
 }
 
+/* h2 adjusted */
 h2 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -111,11 +124,13 @@ h2 {
   padding-bottom: 1rem;
 }
 
+/* section sized */
 section {
   width: 100%;
   height: auto;
 }
 
+/* paragraph to look this way */
 p {
   color: #8f8d91;
   font-family: "Roboto", sans-serif;
@@ -127,12 +142,14 @@ p {
   padding-bottom: 1.5rem;
 }
 
+/* article to look this way */
 article {
   background-color: #191b1c;
   padding: 3rem 3rem 2rem 0.5rem;
   border-bottom: solid #494a4b 0.5px;
 }
 
+/* h3 to look this way */
 h3 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -142,6 +159,7 @@ h3 {
   padding-bottom: 1rem;
 }
 
+/* scroll bar settings */
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -167,7 +185,7 @@ body::-webkit-scrollbar-thumb {
 .social-links:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
-
+/* bottom social logos adjusted */
 #social-class {
   display: flex;
   flex-direction: row;
@@ -177,12 +195,20 @@ body::-webkit-scrollbar-thumb {
   border-right: #494a4b solid 1px;
 }
 
-@media only screen and (max-width: 400px) {
+/* screens under 450px to be adjusted to the following */
+@media only screen and (max-width: 450px) {
   #social-class {
     padding-right: 2rem;
   }
+  .mobile-left-align {
+    margin-left: 2rem;
+    text-align: left;
+  }
 }
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+  .about-me-top {
+    font-size: 2rem;
+  }
   .contact-details {
     padding-top: 1rem;
   }
@@ -245,6 +271,7 @@ body::-webkit-scrollbar-thumb {
     filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   }
 }
+/* screens over 834px to be adjusted to the following */
 @media screen and (min-width: 834px) {
   #social-class {
     border: none;
@@ -326,18 +353,20 @@ body::-webkit-scrollbar-thumb {
     margin-left: 1.5rem;
   }
   .contact-info h1 {
-    margin-top: 1rem;
     padding: 0;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.1);
   }
   .contact-info h3 {
     padding: 0;
     font-size: 1rem;
+    background: rgba(0, 0, 0, 0.1);
   }
   .contact-info {
     background-color: rgba(25, 27, 28, 0.7529411765);
     padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
   }
   .nav-text {
     color: white;
@@ -357,8 +386,5 @@ body::-webkit-scrollbar-thumb {
     margin: 0;
     padding-top: 2rem;
     background: rgba(25, 27, 28, 0.7529411765);
-  }
-  footer p {
-    padding-right: 1rem;
   }
 }/*# sourceMappingURL=stylesheet.css.map */

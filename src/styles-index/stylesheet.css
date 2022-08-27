@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* footer p tags adjusted */
 footer p {
   padding: 0;
   margin: 0;
@@ -8,7 +9,7 @@ footer p {
   width: 100%;
   text-align: center;
 }
-
+/* set default to whole page */
 * {
   margin: 0;
   padding: 0;
@@ -16,14 +17,14 @@ footer p {
   box-sizing: border-box;
   color: white;
 }
-
+/* highlighted logo class to change color and sizing */
 .highlighted-logo {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 2.5rem;
   width: 2.5rem;
   pointer-events: none;
 }
-
+/* header adjusted */
 header {
   position: fixed;
   border-right: solid #494a4b 1px;
@@ -37,6 +38,7 @@ header {
   top: 0;
 }
 
+/* nav bar settings flexed */
 nav {
   display: flex;
   flex-direction: column;
@@ -45,6 +47,7 @@ nav {
   height: 100%;
 }
 
+/* adjusted portfolio logo */
 .portfolio-logo {
   display: flex;
   justify-content: center;
@@ -58,10 +61,12 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
+/* image resized on portfolio */
 .portfolio-logo img {
   width: 50px;
 }
 
+/* nav logo adjusted sizing and color */
 .nav-logo {
   height: 2.5rem;
   width: 2.5rem;
@@ -72,6 +77,7 @@ nav {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
+/* each link has been resized for navbar */
 nav a {
   height: 9%;
   margin-bottom: 1.5rem;
@@ -79,6 +85,7 @@ nav a {
   justify-content: center;
 }
 
+/* main container adjusted and sized up */
 main {
   position: absolute;
   top: 0px;
@@ -89,10 +96,12 @@ main {
   left: 75px;
 }
 
+/* x horizontal bar hidden for a cleaner look */
 body {
   overflow-x: hidden;
 }
 
+/* h2 adjustments */
 h2 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -102,11 +111,13 @@ h2 {
   padding-bottom: 1rem;
 }
 
+/* section given a full width with height auto */
 section {
   width: 100%;
   height: auto;
 }
 
+/* adjusted p to color size, line height and spacing */
 p {
   color: #8f8d91;
   font-family: "Roboto", sans-serif;
@@ -118,6 +129,7 @@ p {
   padding-bottom: 1.5rem;
 }
 
+/* article adjusted the padding for size */
 article {
   background-color: #191b1c;
   padding: 3rem 3rem 2rem 0.5rem;
@@ -125,6 +137,7 @@ article {
   text-align: center;
 }
 
+/* h3 adjusted */
 h3 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -134,6 +147,7 @@ h3 {
   padding-bottom: 1rem;
 }
 
+/* scroll bar settings */
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -148,6 +162,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #191b1c;
 }
 
+/* social logos adjusted and coloured */
 .social-links {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   height: 64px;
@@ -160,6 +175,7 @@ body::-webkit-scrollbar-thumb {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
+/* container within made the adjustments to logo */
 #social-class {
   display: flex;
   flex-direction: row;
@@ -170,6 +186,7 @@ body::-webkit-scrollbar-thumb {
   background: #191b1c;
 }
 
+/* article-icons adjusted to size */
 .article-icon {
   filter: invert(100%) sepia(0%) saturate(7437%) hue-rotate(34deg) brightness(103%) contrast(103%);
   margin-bottom: 1rem;
@@ -177,17 +194,26 @@ body::-webkit-scrollbar-thumb {
   width: 64px;
 }
 
+/* adjusted the follow from 400px and below */
 @media only screen and (max-width: 400px) {
   #social-class {
     padding-right: 2rem;
   }
+  footer {
+    padding-right: 1rem;
+  }
 }
+/* adjusted the following between 50px and 833px width*/
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
   p {
     font-size: 1rem;
+    text-align: left;
   }
   .contact-details {
     width: 96.1%;
+  }
+  .mobile-size-center {
+    text-align: center;
   }
   article {
     padding-top: 1rem;
@@ -196,6 +222,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     padding-top: 1rem;
     right: 0.5rem;
+    font-size: 1rem;
   }
   main {
     position: fixed;
@@ -237,6 +264,7 @@ body::-webkit-scrollbar-thumb {
     padding-right: 1rem;
   }
 }
+/* adjusted 833px width and higher*/
 @media screen and (min-width: 834px) {
   .contents-display-single-row h1 {
     display: none;
@@ -248,6 +276,7 @@ body::-webkit-scrollbar-thumb {
     height: auto;
     font-size: 1rem;
     line-height: 2rem;
+    background: rgba(0, 0, 0, 0.1);
   }
   a {
     text-decoration: none;
@@ -327,10 +356,12 @@ body::-webkit-scrollbar-thumb {
   .contact-info h3 {
     font-size: 1rem;
     padding: 0;
+    background: rgba(0, 0, 0, 0.1);
   }
   .contact-info {
     background-color: rgba(25, 27, 28, 0.7529411765);
     padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
   }
   .nav-text {
     color: white;

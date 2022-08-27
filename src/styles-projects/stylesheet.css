@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* adjustment to whole page */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
   color: white;
 }
 
+/* logos to look a certain way when highlighted */
 .highlighted-logo {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 2.5rem;
@@ -14,6 +16,7 @@
   pointer-events: none;
 }
 
+/* header fixed, sized */
 header {
   position: fixed;
   border-right: solid #494a4b 1px;
@@ -27,6 +30,7 @@ header {
   top: 0;
 }
 
+/* nav settings for container to flex */
 nav {
   display: flex;
   flex-direction: column;
@@ -35,6 +39,7 @@ nav {
   height: 100%;
 }
 
+/* portfolio-logo settings and color */
 .portfolio-logo {
   display: flex;
   justify-content: center;
@@ -48,20 +53,24 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
+/* img portfolio-adjustments */
 .portfolio-logo img {
   width: 50px;
 }
 
+/* nav logo adjustments*/
 .nav-logo {
   height: 2.5rem;
   width: 2.5rem;
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 }
 
+/* nav-logo adjustments */
 .nav-logo:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
+/* nav link adjustments */
 nav a {
   height: 9%;
   margin-bottom: 1.5rem;
@@ -69,6 +78,7 @@ nav a {
   justify-content: center;
 }
 
+/* main set to the following */
 main {
   position: absolute;
   top: 0px;
@@ -79,10 +89,12 @@ main {
   left: 75px;
 }
 
+/* body horizontal scoll bar hidden */
 body {
   overflow-x: hidden;
 }
 
+/* h1 adjustments */
 h1 {
   font-family: "Roboto", sans-serif;
   color: #00c483;
@@ -92,6 +104,7 @@ h1 {
   line-height: 2rem;
 }
 
+/* h2 adjustments */
 h2 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -101,11 +114,13 @@ h2 {
   padding-bottom: 1rem;
 }
 
+/* section adjustments */
 section {
   width: 100%;
   height: auto;
 }
 
+/* paragraph adjustments */
 p {
   color: #8f8d91;
   font-family: "Roboto", sans-serif;
@@ -117,12 +132,14 @@ p {
   padding-bottom: 1.5rem;
 }
 
+/* article tweaks */
 article {
   background-color: #191b1c;
   padding: 3rem 3rem 2rem 3rem;
   border-bottom: solid #494a4b 0.5px;
 }
 
+/* h3 adjustments */
 h3 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -132,6 +149,7 @@ h3 {
   padding-bottom: 1rem;
 }
 
+/* scroll bar settings */
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -146,6 +164,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #191b1c;
 }
 
+/* icon on socials sized up and changed color */
 .social-links {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   height: 64px;
@@ -158,6 +177,7 @@ body::-webkit-scrollbar-thumb {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
+/* each container to get icons to behave a certain way */
 #social-class {
   display: flex;
   flex-direction: row;
@@ -167,12 +187,14 @@ body::-webkit-scrollbar-thumb {
   border-right: #494a4b solid 1px;
 }
 
+/* social-class p tags changed */
 #social-class p {
   color: white;
   flex: 1;
   width: 100%;
 }
 
+/* class to adjust icons */
 .contact-me-social {
   width: 96.1%;
   font-size: 1.3rem;
@@ -201,12 +223,8 @@ body::-webkit-scrollbar-thumb {
   max-width: 100%;
   font-size: 1rem;
 }
-
+/* adjusted the following tags under 400px */
 @media only screen and (max-width: 400px) {
-  footer p {
-    margin: 0;
-    width: 100%;
-  }
   footer {
     text-align: center;
     margin: 0;
@@ -215,14 +233,6 @@ body::-webkit-scrollbar-thumb {
   }
   .contents-display-single-row-projects {
     padding-right: 2rem;
-  }
-  .about-me-top {
-    display: flex;
-    justify-content: center;
-    font-size: 2.5rem;
-  }
-  .wide-screen-border-settings {
-    padding-right: 5rem;
   }
   article {
     padding-right: 5rem;
@@ -233,8 +243,23 @@ body::-webkit-scrollbar-thumb {
   #social-class {
     padding-right: 3rem;
   }
+  .mobile-left-align {
+    text-align: left;
+    margin-left: 1.9rem;
+  }
+  .mobile-left-align-single-row {
+    margin-left: 3rem;
+    padding-right: 2rem;
+    text-align: left;
+  }
 }
+/* adjusted the following tags over 50px and under 833px */
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+  .about-me-top {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
   .contents-display-single-row-projects {
     padding-right: 2rem;
   }
@@ -259,13 +284,16 @@ body::-webkit-scrollbar-thumb {
   h3 {
     position: relative;
     right: 0.5rem;
+    margin: 0;
+    padding: 0;
+    padding-top: 1rem;
   }
   p {
     font-size: 1rem;
     text-align: center;
   }
   .article-row-padding {
-    padding: 3rem;
+    padding: 0;
     text-align: center;
     width: 100%;
     display: flex;
@@ -279,16 +307,6 @@ body::-webkit-scrollbar-thumb {
   }
   .portfolio-section {
     display: none;
-  }
-  .article-icon-horizontal-text {
-    color: #8f8d91;
-    font-family: "Roboto", sans-serif;
-    width: 80%;
-    margin: auto;
-    font-size: 1.2rem;
-    line-height: 2.2rem;
-    word-spacing: 3.5px;
-    padding-bottom: 1.5rem;
   }
   #social-class {
     width: 100vw;
@@ -326,12 +344,14 @@ body::-webkit-scrollbar-thumb {
     word-spacing: none;
     color: white;
     font-size: 1rem;
+    text-align: center;
+  }
+  .article-icon {
+    width: 10rem;
   }
 }
+/* adjusted the following tags over 834px */
 @media screen and (min-width: 834px) {
-  .article-row-padding {
-    border-right: solid #494a4b 1px;
-  }
   a {
     text-decoration: none;
   }
@@ -345,6 +365,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-right: solid #494a4b 1px;
   }
   .contents-display-single-row-projects {
     display: flex;
@@ -421,18 +442,19 @@ body::-webkit-scrollbar-thumb {
     margin-left: 1.5rem;
   }
   .contact-info h1 {
-    margin-top: 1rem;
     padding: 0;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.1);
   }
   .contact-info h3 {
     font-size: 1rem;
     padding: 0;
+    background: rgba(0, 0, 0, 0.1);
   }
   .contact-info {
     padding: 1rem;
-    background-color: rgba(25, 27, 28, 0.7529411765);
+    background: rgba(0, 0, 0, 0.5);
   }
   .nav-text {
     color: white;

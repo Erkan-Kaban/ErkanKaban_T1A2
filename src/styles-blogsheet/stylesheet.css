@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* footer p settings */
 footer p {
   padding: 0;
   margin: 0;
@@ -10,6 +11,7 @@ footer p {
   border: none;
 }
 
+/* title at top settings */
 .about-me-top {
   border-top: solid #494a4b 1px;
   width: 100%;
@@ -17,6 +19,7 @@ footer p {
   padding: 2rem 2rem;
 }
 
+/* whole site default option */
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +28,7 @@ footer p {
   color: white;
 }
 
+/* highlighted logo look */
 .highlighted-logo {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 2.5rem;
@@ -32,6 +36,7 @@ footer p {
   pointer-events: none;
 }
 
+/* header sized and adjusted accordingly */
 header {
   position: fixed;
   border-right: solid #494a4b 1px;
@@ -45,6 +50,7 @@ header {
   top: 0;
 }
 
+/* nav container adjusted to flex column and center */
 nav {
   display: flex;
   flex-direction: column;
@@ -53,6 +59,7 @@ nav {
   height: 100%;
 }
 
+/* portoflio logo adjustments */
 .portfolio-logo {
   display: flex;
   justify-content: center;
@@ -66,10 +73,12 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
+/* portoflio img resizing */
 .portfolio-logo img {
   width: 50px;
 }
 
+/* nav logo class to adjust sizing of logo and hover and links */
 .nav-logo {
   height: 2.5rem;
   width: 2.5rem;
@@ -87,6 +96,7 @@ nav a {
   justify-content: center;
 }
 
+/* main container resized and positioned */
 main {
   position: absolute;
   top: 0px;
@@ -96,11 +106,12 @@ main {
   height: 32rem;
   left: 75px;
 }
-
+/* horinzontal bar hidden */
 body {
   overflow-x: hidden;
 }
 
+/* h1 adjusted accordingly */
 h1 {
   font-family: "Roboto", sans-serif;
   color: #00c483;
@@ -108,9 +119,10 @@ h1 {
   height: auto;
   font-size: 1rem;
   line-height: 2rem;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
+/* h2 adjusted */
 h2 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -119,11 +131,13 @@ h2 {
   padding-bottom: 1rem;
 }
 
+/* section width set and height */
 section {
   width: 100%;
   height: auto;
 }
 
+/* paragraph to look this way */
 p {
   color: #8f8d91;
   font-family: "Roboto", sans-serif;
@@ -133,10 +147,12 @@ p {
   padding-bottom: 1.5rem;
 }
 
+/* article background set */
 article {
   background-color: #191b1c;
 }
 
+/* h3 set this way */
 h3 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -146,6 +162,7 @@ h3 {
   padding-bottom: 1rem;
 }
 
+/* scroll bar settings */
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -160,6 +177,7 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #191b1c;
 }
 
+/* social links adjusted */
 .social-links {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   height: 64px;
@@ -172,6 +190,7 @@ body::-webkit-scrollbar-thumb {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
+/* social container set this way for the icons to sit in a row and centered */
 #social-class {
   display: flex;
   flex-direction: row;
@@ -181,6 +200,7 @@ body::-webkit-scrollbar-thumb {
   border-right: #494a4b solid 1px;
 }
 
+/* class to display block and padding height. */
 .contents-display-double-row img {
   display: block;
   padding-top: 2rem;
@@ -189,6 +209,7 @@ body::-webkit-scrollbar-thumb {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 }
 
+/* articles with a single row to itself */
 .single-article-wide {
   width: 100%;
   display: flex;
@@ -198,13 +219,19 @@ body::-webkit-scrollbar-thumb {
   border-right: solid #494a4b 1px;
   padding-bottom: auto;
 }
-
+/* adjustments on each p tag */
 .single-article-wide p {
   padding: 2rem 4rem 2rem 3rem;
   text-align: left;
 }
-
-@media only screen and (max-width: 400px) {
+/* adjustments made 500px and under */
+@media only screen and (max-width: 500px) {
+  .portfolio-logo {
+    margin: 0;
+  }
+  p {
+    margin-right: 1rem;
+  }
   #social-class {
     padding-right: 2rem;
   }
@@ -236,16 +263,20 @@ body::-webkit-scrollbar-thumb {
   .about-me-top {
     border: none;
     padding-top: 0rem;
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .single-article-wide img {
-    padding-top: 1rem;
+    padding-right: 3rem;
   }
+}
+/* adjustments amde between 50px and 833px */
+@media only screen and (max-width: 50px), screen and (max-width: 833px) {
   .mobile-friendly {
     padding: 0;
   }
-}
-@media only screen and (max-width: 50px), screen and (max-width: 833px) {
+  .about-me-top {
+    font-size: 2rem;
+  }
   main {
     position: fixed;
     overflow-y: scroll;
@@ -279,6 +310,7 @@ body::-webkit-scrollbar-thumb {
     border-right: solid #494a4b 1px;
   }
   p {
+    font-size: 1rem;
     border: none;
   }
 }
@@ -293,6 +325,7 @@ body::-webkit-scrollbar-thumb {
   }
   .contact-info h1 {
     text-decoration: none;
+    background: rgba(0, 0, 0, 0.1);
   }
   .contents-display-single-row {
     border-right: solid 1px #494a4b;
@@ -351,10 +384,12 @@ body::-webkit-scrollbar-thumb {
   .contact-info h3 {
     font-size: 1rem;
     padding: 0;
+    background: rgba(0, 0, 0, 0.1);
   }
   .contact-info {
     padding: 1rem;
     background-color: rgba(25, 27, 28, 0.7529411765);
+    background: rgba(0, 0, 0, 0.5);
   }
   .nav-text {
     color: white;

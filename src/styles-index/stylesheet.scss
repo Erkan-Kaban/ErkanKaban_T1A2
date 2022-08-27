@@ -200,14 +200,20 @@ body::-webkit-scrollbar-thumb {
     #social-class {
         padding-right: 2rem;
     }
-    
+    footer {
+        padding-right: 1rem;
+    }
 }
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
     p {
         font-size: 1rem;
+        text-align: left;
     }
     .contact-details {
         width: 96.1%;
+    }
+    .mobile-size-center {
+        text-align: center;
     }
     article {
         padding-top: 1rem;
@@ -216,6 +222,7 @@ body::-webkit-scrollbar-thumb {
         position: relative;
         padding-top: 1rem;
         right: .5rem;
+        font-size: 1rem;
     }
     main {
         position: fixed;
@@ -272,6 +279,7 @@ body::-webkit-scrollbar-thumb {
         height: auto;
         font-size: 1rem;
         line-height: 2rem;
+        background: rgba(0,0,0,0.1)
     }
 
     a {
@@ -309,7 +317,6 @@ body::-webkit-scrollbar-thumb {
         text-align: center;
         padding: 2rem;
         width: 30vw; // chages the actual content size of each article
-        // margin-left: 50%;
     }
 
     html {
@@ -345,7 +352,6 @@ body::-webkit-scrollbar-thumb {
         background-position: center;
         background-repeat: no-repeat;
         justify-content: flex-end;
-
     }
 
     .social-links {
@@ -362,10 +368,12 @@ body::-webkit-scrollbar-thumb {
     .contact-info h3 {
         font-size: 1rem;
         padding: 0;
+        background: rgba(0,0,0,0.1)
     }
     .contact-info {
         background-color: #191b1cc0; 
         padding: 1rem;
+        background: rgba(0,0,0,0.5)
     }
     .nav-text {
         color: white;

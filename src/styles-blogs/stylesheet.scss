@@ -198,7 +198,10 @@ body::-webkit-scrollbar-thumb {
     border-right: #494a4b solid 1px;
 }
 
-
+.wide-screen-border-settings p {
+    padding: 0;
+    font-size: 1rem;
+}
 .wide-screen-border-settings {
     border-top: solid #494a4b 1px;
     padding: 3rem 3rem;
@@ -218,10 +221,16 @@ body::-webkit-scrollbar-thumb {
 article {
     padding: 1rem;
 }
+.single-article-wide p {
+    display: inline-block;
+    padding: 0;
+    font-size: 1rem;
+    margin: 0;
+    height: auto;
+}
 
 
-
-@media only screen and (max-width: 380px){
+@media only screen and (max-width: 480px){
     footer p {
         padding-right: 2rem;
     }
@@ -237,8 +246,10 @@ article {
     }
     .about-me-top {
         padding: 0;
-        padding-right: 5rem;
-        
+        margin: 0;
+        font-size: 2rem;
+        margin: 1rem;
+        width: 87%
     }
     .single-article-wide img {
         width: 13rem;
@@ -342,9 +353,7 @@ article {
         display: flex;
         justify-content: center;
         border-right: solid #494a4b 1px;
-    }
-    .contact-info h1 {
-        text-decoration: none;
+        flex-wrap: wrap;
     }
     .about-me-top {
         border: none;
@@ -428,18 +437,20 @@ article {
     }
     
     .contact-info h1 {
-        margin-top: 1rem;
         padding: 0;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        text-decoration: none;
+        background: rgba(0,0,0,0.1);
     }
     .contact-info h3 {
         font-size: 1rem;
         padding: 0;
+        background: rgba(0,0,0,0.1);
     }
     .contact-info {
         padding: 1rem;
-        background-color: #191b1cc0; 
+        background: rgba(0,0,0,0.5);
     }
     .nav-text {
         color: white;

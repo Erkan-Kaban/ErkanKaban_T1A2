@@ -225,10 +225,7 @@ body::-webkit-scrollbar-thumb {
 
 
 @media only screen and (max-width: 400px){
-   footer p {
-    margin: 0;
-    width: 100%;
-   }
+   
     footer {
         text-align: center;
         margin: 0;
@@ -238,14 +235,7 @@ body::-webkit-scrollbar-thumb {
     .contents-display-single-row-projects {
         padding-right: 2rem;
     }
-    .about-me-top {
-        display: flex;
-        justify-content: center;
-        font-size: 2.5rem;
-    }
-    .wide-screen-border-settings {
-        padding-right: 5rem;
-    }
+    
     article {
         padding-right: 5rem;
     }
@@ -255,9 +245,24 @@ body::-webkit-scrollbar-thumb {
     #social-class {
         padding-right: 3rem;
     }
+    .mobile-left-align {
+        text-align: left;
+        margin-left: 1.9rem;
+    }
+
+    .mobile-left-align-single-row {
+        margin-left: 3rem;
+        padding-right: 2rem;
+        text-align: left;
+    }
 }
 // smaller screens only ------------------
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
+    .about-me-top {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+    }
     
     .contents-display-single-row-projects {
         padding-right: 2rem;
@@ -285,16 +290,19 @@ body::-webkit-scrollbar-thumb {
      }
      
      h3 {
-     position: relative;
-     right: .5rem;
+        position: relative;
+        right: .5rem;
+        margin: 0;
+        padding: 0;
+        padding-top: 1rem;
      }
      p {
-     font-size: 1rem;
-     text-align: center
+        font-size: 1rem;
+        text-align: center;
      }
      
     .article-row-padding { 
-        padding: 3rem;
+        padding: 0;
         text-align: center;
         width: 100%; // chages the actual content size of each article
         display: flex;
@@ -310,16 +318,16 @@ body::-webkit-scrollbar-thumb {
    .portfolio-section {
         display: none;
    }
-   .article-icon-horizontal-text {
-        color: #8f8d91;
-        font-family: 'Roboto', sans-serif;
-        width: 80%;
-        margin: auto;
-        font-size: 1.2rem;
-        line-height: 2.2rem;
-        word-spacing: 3.5px;
-        padding-bottom: 1.5rem;
-   }
+//    .article-icon-horizontal-text {
+//         color: #8f8d91;
+//         font-family: 'Roboto', sans-serif;
+//         width: 80%;
+//         margin: auto;
+//         font-size: 1.2rem;
+//         line-height: 2.2rem;
+//         word-spacing: 3.5px;
+//         padding-bottom: 1.5rem;
+//    }
    #social-class {
         width: 100vw;;
    }
@@ -357,6 +365,10 @@ body::-webkit-scrollbar-thumb {
         word-spacing: none;
         color: white;
         font-size: 1rem;
+        text-align: center;
+    }
+    .article-icon {
+        width: 10rem;
     }
     
 }
@@ -367,10 +379,6 @@ body::-webkit-scrollbar-thumb {
 
 // Bigger screens and up -------------------------------
 @media screen and (min-width: 834px) {
-
-    .article-row-padding {
-        border-right: solid #494a4b 1px; 
-    }
 
     a {
         text-decoration: none;
@@ -386,6 +394,7 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-right: solid #494a4b 1px; 
     }
     .contents-display-single-row-projects {
         display: flex;
@@ -472,18 +481,19 @@ body::-webkit-scrollbar-thumb {
     }
     
     .contact-info h1 {
-        margin-top: 1rem;
         padding: 0;
         width: 100%;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        background: rgba(0,0,0,0.1);
     }
     .contact-info h3 {
         font-size: 1rem;
         padding: 0;
+        background: rgba(0,0,0,0.1);
     }
     .contact-info {
         padding: 1rem;
-        background-color: #191b1cc0; 
+        background: rgba(0,0,0,0.5);
     }
     .nav-text {
         color: white;
