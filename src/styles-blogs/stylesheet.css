@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-/* The main title adjustments for the page */
 .about-me-top {
   width: 100%;
   margin: 1.5rem 1rem;
 }
-/* footer paragraph adjustments */
+
 footer p {
   padding: 0;
   margin: 0;
@@ -16,7 +15,6 @@ footer p {
   border: none;
 }
 
-/* Setting page to this standard, unless changed. */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +23,6 @@ footer p {
   color: white;
 }
 
-/* highlights logo to certain colour and resizes */
 .highlighted-logo {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
   height: 2.5rem;
@@ -33,7 +30,6 @@ footer p {
   pointer-events: none;
 }
 
-/* background header of navbar setup */
 header {
   position: fixed;
   border-right: solid #494a4b 1px;
@@ -48,7 +44,6 @@ header {
   border-bottom: none;
 }
 
-/* nav settings */
 nav {
   display: flex;
   flex-direction: column;
@@ -57,7 +52,6 @@ nav {
   height: 100%;
 }
 
-/* top left icon settings */
 .portfolio-logo {
   display: flex;
   justify-content: center;
@@ -71,24 +65,20 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
-/* img adjustment to icon */
 .portfolio-logo img {
   width: 50px;
 }
 
-/* nav-logo adjustments to all icon links */
 .nav-logo {
   height: 2.5rem;
   width: 2.5rem;
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
 }
 
-/* hover color change */
 .nav-logo:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
-/* link adjustments */
 nav a {
   height: 9%;
   margin-bottom: 1.5rem;
@@ -96,7 +86,6 @@ nav a {
   justify-content: center;
 }
 
-/* our main section, position on the screen accordingly */
 main {
   position: absolute;
   top: 0px;
@@ -106,12 +95,11 @@ main {
   height: 32rem;
   left: 75px;
 }
-/* hiding the horizontal scroll bar to fit nav and other information in one size. */
+
 body {
   overflow-x: hidden;
 }
 
-/* adjusted my h1 to look a certain way and size */
 h1 {
   font-family: "Roboto", sans-serif;
   color: #00c483;
@@ -122,7 +110,6 @@ h1 {
   text-decoration: underline;
 }
 
-/* h2 adjustments for the page */
 h2 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -131,13 +118,11 @@ h2 {
   padding-bottom: 1rem;
 }
 
-/* section taking full width and height set to auto */
 section {
   width: 100%;
   height: auto;
 }
 
-/* all p tags adjust to this size and format */
 p {
   color: #8f8d91;
   font-family: "Roboto", sans-serif;
@@ -149,13 +134,11 @@ p {
   padding-bottom: 1.5rem;
 }
 
-/* gave each article some padding and background color */
 article {
   background-color: #191b1c;
   padding: 3rem 3rem 3rem 3rem;
 }
 
-/* adjusted h3 sizes and margin */
 h3 {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -165,7 +148,6 @@ h3 {
   padding-bottom: 1rem;
 }
 
-/* adjustments to scroll bar look and background */
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -180,7 +162,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #191b1c;
 }
 
-/* social-links changed to look a certain color and size */
 .social-links {
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   height: 64px;
@@ -193,7 +174,6 @@ body::-webkit-scrollbar-thumb {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
 
-/* changing the social container to behave a certain way */
 #social-class {
   display: flex;
   flex-direction: row;
@@ -203,26 +183,22 @@ body::-webkit-scrollbar-thumb {
   border-right: #494a4b solid 1px;
 }
 
-/* under class we set the padding to 0 and changed the font-size */
 .wide-screen-border-settings p {
   padding: 0;
   font-size: 1rem;
 }
 
-/* adjusting classes border and padding */
 .wide-screen-border-settings {
   border-top: solid #494a4b 1px;
   padding: 3rem 3rem;
 }
 
-/* the images in class adjusted */
 .wide-screen-border-settings img {
   height: 10rem;
   filter: invert(73%) sepia(4%) saturate(607%) hue-rotate(144deg) brightness(89%) contrast(89%);
   padding-bottom: 1rem;
 }
 
-/*hover settings as well as class settings */
 .wide-screen-border-settings img:hover, .single-article-wide img:hover {
   filter: invert(59%) sepia(32%) saturate(5336%) hue-rotate(123deg) brightness(96%) contrast(101%);
 }
@@ -230,11 +206,11 @@ body::-webkit-scrollbar-thumb {
 .wide-screen-border-settings h1:hover, .single-article-wide h1:hover {
   text-decoration: none;
 }
-/* article padding */
+
 article {
   padding: 1rem;
 }
-/* p settings in class */
+
 .single-article-wide p {
   display: inline-block;
   padding: 0;
@@ -242,7 +218,7 @@ article {
   margin: 0;
   height: auto;
 }
-/* We are changing the pages elements from 480 and under here */
+
 @media only screen and (max-width: 480px) {
   footer p {
     padding-right: 2rem;
@@ -288,12 +264,12 @@ article {
     text-align: center;
     padding-right: 3rem;
   }
-  .single-article-wide h1 {
-    padding-left: 2rem;
+  .single-article-wide p {
+    text-align: center;
+    width: 70%;
+    padding-right: 2rem;
   }
 }
-
-/* We are changing the pages elements from 50px to 833px*/
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
   .about-me-top {
     display: flex;

@@ -275,9 +275,12 @@ article {
         text-align: center;
         padding-right: 3rem;
     }
-    .single-article-wide h1 {
-        padding-left: 2rem;
+    .single-article-wide p {
+        text-align: center;
+        width: 70%;
+        padding-right: 2rem;
     }
+   
 }
 // smaller screens only ------------------
 @media only screen and (max-width: 50px), screen and (max-width: 833px) {
